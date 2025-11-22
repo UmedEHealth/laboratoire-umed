@@ -1909,7 +1909,7 @@
             }
         }
 
-        // Fonction pour afficher les notifications
+        // Fonction pour afficher les notifications (THÈME BLEU UMED UNIQUEMENT)
         function showNotification(message, type = 'info') {
             // Créer l'élément de notification s'il n'existe pas
             let notificationContainer = document.getElementById('notification-container');
@@ -1917,33 +1917,79 @@
                 notificationContainer = document.createElement('div');
                 notificationContainer.id = 'notification-container';
                 notificationContainer.style.cssText = `
-                                position: fixed;
-                                top: 20px;
-                                right: 20px;
-                                z-index: 9999;
-                                max-width: 400px;
-                            `;
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 9999;
+                    max-width: 400px;
+                `;
                 document.body.appendChild(notificationContainer);
             }
 
-            // Créer la notification
+            // Créer la notification avec UNIQUEMENT le thème bleu UMED
             const notification = document.createElement('div');
-            const alertClass = type === 'success' ? 'alert-success' :
-                type === 'error' ? 'alert-danger' :
-                    type === 'warning' ? 'alert-warning' : 'alert-info';
+            notification.style.cssText = `
+                background-color: #d1ecf1;
+                border-left: 4px solid #3498db;
+                color: #0c5460;
+                padding: 15px 20px;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                animation: slideIn 0.3s ease-out;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 14px;
+            `;
 
-            notification.className = `alert ${alertClass} alert-dismissible fade show`;
             notification.innerHTML = `
-                            ${message}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        `;
+                <div style="display: flex; align-items: center; flex: 1;">
+                    <i class="fas fa-info-circle" style="font-size: 20px; margin-right: 12px; color: #3498db;"></i>
+                    <span style="font-weight: 500;">${message}</span>
+                </div>
+                <button type="button" style="
+                    background: none;
+                    border: none;
+                    color: #0c5460;
+                    font-size: 20px;
+                    cursor: pointer;
+                    padding: 0;
+                    margin-left: 15px;
+                    opacity: 0.7;
+                    transition: opacity 0.2s;
+                " onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" onclick="this.parentElement.remove()">
+                    ×
+                </button>
+            `;
+
+            // Ajouter l'animation CSS si elle n'existe pas
+            if (!document.getElementById('notification-styles')) {
+                const styleSheet = document.createElement('style');
+                styleSheet.id = 'notification-styles';
+                styleSheet.textContent = `
+                    @keyframes slideIn {
+                        from {
+                            transform: translateX(400px);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                `;
+                document.head.appendChild(styleSheet);
+            }
 
             notificationContainer.appendChild(notification);
 
             // Auto-supprimer après 5 secondes
             setTimeout(() => {
-                if (notification.parentNode) {
-                    notification.remove();
+                if (notification.parentElement) {
+                    notification.style.animation = 'slideIn 0.3s ease-out reverse';
+                    setTimeout(() => notification.remove(), 300);
                 }
             }, 5000);
         }

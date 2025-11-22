@@ -1715,14 +1715,15 @@
                     function validateFormulePercent(elementId, percent, min, max) {
                         const element = document.getElementById(elementId);
                         if (element && percent > 0) {
+                            // Toujours afficher en noir, jamais en rouge
+                            element.classList.add('normal-value');
+                            element.classList.remove('abnormal-value');
+                            
+                            // Log pour information uniquement
                             if (percent < min || percent > max) {
-                                element.classList.add('abnormal-value');
-                                element.classList.remove('normal-value');
-                                console.log(`⚠️ POURCENTAGE ANORMAL: ${elementId} = ${percent.toFixed(1)}% (intervalle: ${min}-${max}%)`);
+                                console.log(`ℹ️ Pourcentage hors intervalle standard: ${elementId} = ${percent.toFixed(1)}% (intervalle: ${min}-${max}%)`);
                             } else {
-                                element.classList.add('normal-value');
-                                element.classList.remove('abnormal-value');
-                                console.log(`✓ Pourcentage normal: ${elementId} = ${percent.toFixed(1)}%`);
+                                console.log(`✓ Pourcentage dans l'intervalle: ${elementId} = ${percent.toFixed(1)}%`);
                             }
                         }
                     }
@@ -1734,12 +1735,12 @@
                     document.getElementById('lymphocytes-value').textContent = lymphocytesCount > 0 ? lymphocytesPercent.toFixed(1).replace('.', ',') : '-';
                     document.getElementById('monocytes-value').textContent = monocytesCount > 0 ? monocytesPercent.toFixed(1).replace('.', ',') : '-';
 
-                    // Valider les pourcentages (intervalles approximatifs standards)
-                    validateFormulePercent('pnn-value', pnnPercent, 40, 75);
-                    validateFormulePercent('pne-value', pnePercent, 1, 6);
-                    validateFormulePercent('pnb-value', pnbPercent, 0, 2);
-                    validateFormulePercent('lymphocytes-value', lymphocytesPercent, 20, 45);
-                    validateFormulePercent('monocytes-value', monocytesPercent, 2, 10);
+                    // Valider les pourcentages (intervalles standards médicaux)
+                    validateFormulePercent('pnn-value', pnnPercent, 40, 85);  // Polynucléaires neutrophiles: 40-85%
+                    validateFormulePercent('pne-value', pnePercent, 0.5, 7);  // Polynucléaires éosinophiles: 0.5-7%
+                    validateFormulePercent('pnb-value', pnbPercent, 0, 2);    // Polynucléaires basophiles: 0-2%
+                    validateFormulePercent('lymphocytes-value', lymphocytesPercent, 15, 50);  // Lymphocytes: 15-50%
+                    validateFormulePercent('monocytes-value', monocytesPercent, 2, 12);  // Monocytes: 2-12%
 
                     // Afficher les textes "%" et "soit" quand il y a des leucocytes totaux
                     document.getElementById('pnn-percent-text').style.display = '';
