@@ -1571,19 +1571,19 @@
 
 
             // Résultats hématologie - Remplir tous les champs avec les données du formulaire
-            const leucocytesValue = formData.leucocytes || '-';
-            const globulesRougesValue = formData.globulesRouges || '-';
-            const hemoglobineValue = formData.hemoglobine || '-';
-            const hematocriteValue = formData.hematocrite || '-';
-            const vgmValue = formData.vgm || '-';
-            const tcmhValue = formData.tcmh || '-';
-            const ccmhValue = formData.ccmh || '-';
-            const plaquettesValue = formData.plaquettes || '-';
-            const pnnValue = formData.pnn || '-';
-            const pneValue = formData.pne || '-';
-            const pnbValue = formData.pnb || '-';
-            const lymphocytesValue = formData.lymphocytes || '-';
-            const monocytesValue = formData.monocytes || '-';
+            const leucocytesValue = formData.leucocytes || '';
+            const globulesRougesValue = formData.globulesRouges || '';
+            const hemoglobineValue = formData.hemoglobine || '';
+            const hematocriteValue = formData.hematocrite || '';
+            const vgmValue = formData.vgm || '';
+            const tcmhValue = formData.tcmh || '';
+            const ccmhValue = formData.ccmh || '';
+            const plaquettesValue = formData.plaquettes || '';
+            const pnnValue = formData.pnn || '';
+            const pneValue = formData.pne || '';
+            const pnbValue = formData.pnb || '';
+            const lymphocytesValue = formData.lymphocytes || '';
+            const monocytesValue = formData.monocytes || '';
 
             // Fonction de validation ACTIVE - mise en rouge des valeurs anormales
             function setValueWithValidation(elementId, value, min, max, patientAge, patientSexe) {
@@ -1868,13 +1868,13 @@
 
             // Remplir seulement les valeurs (pas d'antécédents dans ce tableau)
             const leucocytesElement = document.getElementById('leucocytes-value');
-            if (leucocytesElement) leucocytesElement.textContent = formData.leucocytes || '-';
+            if (leucocytesElement) leucocytesElement.textContent = formData.leucocytes || '';
 
             const globulesRougesElement = document.getElementById('globules-rouges-value');
-            if (globulesRougesElement) globulesRougesElement.textContent = formData.globulesRouges || '-';
+            if (globulesRougesElement) globulesRougesElement.textContent = formData.globulesRouges || '';
 
             const hemoglobineElement = document.getElementById('hemoglobine-value');
-            if (hemoglobineElement) hemoglobineElement.textContent = formData.hemoglobine || '-';
+            if (hemoglobineElement) hemoglobineElement.textContent = formData.hemoglobine || '';
 
 
             // Commentaires biochimie (si l'élément existe)
@@ -1884,23 +1884,23 @@
             }
 
             // Remplir les valeurs de la section Biochimie avec validation des valeurs anormales
-            colorerValeurAnormale('glycemie-value', formData.glycemieResult || '-', 0.7, 1.0);
-            colorerValeurAnormale('uree-value', formData.ureeResult || '-', 0.15, 0.45);
-            colorerValeurAnormale('creatinine-value', formData.creatinineResult || '-', 5, 13);
-            colorerValeurAnormale('asat-value', formData.asatResult || '-', 0, 45);
-            colorerValeurAnormale('alat-value', formData.alatResult || '-', 0, 45);
-            colorerValeurAnormale('ggt-value', formData.ggtResult || '-', 0, 55);
-            colorerValeurAnormale('cholesterol-value', formData.cholesterolResult || '-', 0, 2.0);
-            colorerValeurAnormale('triglycerides-value', formData.triglyceridesResult || '-', 0.4, 1.7);
-            colorerValeurAnormale('hdl-value', formData.hdlResult || '-', 0.6, 999);
-            colorerValeurAnormale('ldl-value', formData.ldlResult || '-', 0, 1.0);
-            colorerValeurAnormale('acide-urique-value', formData.acideUriqueResult || '-', 25, 70);
-            colorerValeurAnormale('crp-value', formData.crpResult || '-', 0, 5);
+            colorerValeurAnormale('glycemie-value', formData.glycemieResult || '', 0.7, 1.0);
+            colorerValeurAnormale('uree-value', formData.ureeResult || '', 0.15, 0.45);
+            colorerValeurAnormale('creatinine-value', formData.creatinineResult || '', 5, 13);
+            colorerValeurAnormale('asat-value', formData.asatResult || '', 0, 45);
+            colorerValeurAnormale('alat-value', formData.alatResult || '', 0, 45);
+            colorerValeurAnormale('ggt-value', formData.ggtResult || '', 0, 55);
+            colorerValeurAnormale('cholesterol-value', formData.cholesterolResult || '', 0, 2.0);
+            colorerValeurAnormale('triglycerides-value', formData.triglyceridesResult || '', 0.4, 1.7);
+            colorerValeurAnormale('hdl-value', formData.hdlResult || '', 0.6, 999);
+            colorerValeurAnormale('ldl-value', formData.ldlResult || '', 0, 1.0);
+            colorerValeurAnormale('acide-urique-value', formData.acideUriqueResult || '', 25, 70);
+            colorerValeurAnormale('crp-value', formData.crpResult || '', 0, 5);
             
             // Électrolytes
-            colorerValeurAnormale('sodium-value', formData.sodiumResult || '-', 136, 145);
-            colorerValeurAnormale('potassium-value', formData.potassiumResult || '-', 3.4, 4.5);
-            colorerValeurAnormale('chlore-value', formData.chloreResult || '-', 98, 107);
+            colorerValeurAnormale('sodium-value', formData.sodiumResult || '', 136, 145);
+            colorerValeurAnormale('potassium-value', formData.potassiumResult || '', 3.4, 4.5);
+            colorerValeurAnormale('chlore-value', formData.chloreResult || '', 98, 107);
 
             // Vérifier si au moins une valeur biochimie est renseignée (incluant électrolytes)
             const biochimieSection = document.getElementById('biochimie-section');
@@ -1922,9 +1922,8 @@
             updateExamensSpecialises(formData);
             
             // Masquer les lignes vides APRÈS avoir rempli toutes les données
-            setTimeout(() => {
-                masquerLignesVides();
-            }, 300);
+            // Augmenter le délai pour s'assurer que tous les calculs sont terminés
+            setTimeout(() => { masquerLignesVides(); }, 100); window.addEventListener('load', () => { setTimeout(masquerLignesVides, 200); });
         }
 
         // Fonction pour remplir la section Goutte Épaisse
@@ -1980,7 +1979,7 @@
             const section = document.getElementById('examens-specialises-section');
             
             // Remplir les champs
-            colorerValeurAnormale('procalcitonine-value', formData.procalcitonineResult || '-', 0, 0.05);
+            colorerValeurAnormale('procalcitonine-value', formData.procalcitonineResult || '', 0, 0.05);
             
             // Afficher la section si des données sont présentes
             if (formData.procalcitonineResult) {
@@ -2391,13 +2390,23 @@
             console.log('🎯 MASQUAGE DIRECT - DÉBUT');
             
             // Masquer directement chaque ligne si sa valeur est vide
-            function masquerSiVide(valueId, rowId) {
+            function masquerSiVide(valueId, rowId, isFormuleLeuc = false) {
                 const valueEl = document.getElementById(valueId);
                 const rowEl = document.getElementById(rowId);
                 
                 if (valueEl && rowEl) {
                     const val = valueEl.textContent.trim();
-                    if (!val || val === '-') {
+                    let isEmpty = false;
+                    
+                    if (isFormuleLeuc) {
+                        // Pour la formule leucocytaire, considérer '0', '00', '-' et vide comme vides
+                        isEmpty = !val || val === '-' || val === '0' || val === '00';
+                    } else {
+                        // Pour les autres tableaux, considérer seulement '-' et vide comme vides
+                        isEmpty = !val || val === '-';
+                    }
+                    
+                    if (isEmpty) {
                         rowEl.style.display = 'none';
                         console.log(`❌ ${rowId} masqué (valeur: "${val}")`);
                     } else {
@@ -2407,7 +2416,7 @@
                 }
             }
             
-            // Appliquer à toutes les lignes
+            // Appliquer à toutes les lignes du tableau hémogramme
             masquerSiVide('leucocytes-value', 'leucocytes-row');
             masquerSiVide('globules-rouges-value', 'globules-rouges-row');
             masquerSiVide('hemoglobine-value', 'hemoglobine-row');
@@ -2417,6 +2426,14 @@
             masquerSiVide('ccmh-value', 'ccmh-row');
             masquerSiVide('plaquettes-value', 'plaquettes-row');
             
+            // Appliquer à toutes les lignes de la formule leucocytaire (avec flag spécial)
+            masquerSiVide('pnn-count', 'pnn-formule-row', true);
+            masquerSiVide('pne-count', 'pne-formule-row', true);
+            masquerSiVide('pnb-count', 'pnb-formule-row', true);
+            masquerSiVide('lymphocytes-count', 'lymphocytes-formule-row', true);
+            masquerSiVide('monocytes-count', 'monocytes-formule-row', true);
+            
+            // Appliquer à toutes les lignes du tableau biochimie
             masquerSiVide('glycemie-value', 'glycemie-row');
             masquerSiVide('uree-value', 'uree-row');
             masquerSiVide('creatinine-value', 'creatinine-row');
@@ -2434,7 +2451,80 @@
             masquerSiVide('chlore-value', 'chlore-row');
             masquerSiVide('procalcitonine-value', 'procalcitonine-row');
             
+            // Vérifier si le tableau hémogramme a des données visibles
+            const hemogrammeRows = [
+                'leucocytes-row', 'globules-rouges-row', 'hemoglobine-row', 'hematocrite-row',
+                'vgm-row', 'tcmh-row', 'ccmh-row', 'plaquettes-row'
+            ];
+            const hasHemogrammeData = hemogrammeRows.some(rowId => {
+                const row = document.getElementById(rowId);
+                return row && row.style.display !== 'none';
+            });
+            
+            // Masquer le titre et le tableau hémogramme si aucune donnée
+            const hemogrammeTitle = document.getElementById('hemogramme-title');
+            const hemogrammeSubtitle1 = document.getElementById('hemogramme-subtitle1');
+            const hemogrammeSubtitle2 = document.getElementById('hemogramme-subtitle2');
+            const hemogrammeTable = document.getElementById('hemogramme-table');
+            
+            if (!hasHemogrammeData) {
+                if (hemogrammeTitle) hemogrammeTitle.style.display = 'none';
+                if (hemogrammeSubtitle1) hemogrammeSubtitle1.style.display = 'none';
+                if (hemogrammeSubtitle2) hemogrammeSubtitle2.style.display = 'none';
+                if (hemogrammeTable) hemogrammeTable.style.display = 'none';
+                console.log('❌ Tableau hémogramme masqué (aucune donnée)');
+            } else {
+                if (hemogrammeTitle) hemogrammeTitle.style.display = '';
+                if (hemogrammeSubtitle1) hemogrammeSubtitle1.style.display = '';
+                if (hemogrammeSubtitle2) hemogrammeSubtitle2.style.display = '';
+                if (hemogrammeTable) hemogrammeTable.style.display = '';
+                console.log('✅ Tableau hémogramme affiché');
+            }
+            
+            // Vérifier si la formule leucocytaire a des données visibles
+            const formuleLeucRows = [
+                'pnn-formule-row', 'pne-formule-row', 'pnb-formule-row',
+                'lymphocytes-formule-row', 'monocytes-formule-row'
+            ];
+            const hasFormuleLeucData = formuleLeucRows.some(rowId => {
+                const row = document.getElementById(rowId);
+                return row && row.style.display !== 'none';
+            });
+            
+            // Masquer le titre et le tableau formule leucocytaire si aucune donnée
+            const formuleTitle = document.getElementById('formule-leucocytaire-title');
+            const formuleTable = document.getElementById('formule-leucocytaire-table');
+            
+            if (!hasFormuleLeucData) {
+                if (formuleTitle) formuleTitle.style.display = 'none';
+                if (formuleTable) formuleTable.style.display = 'none';
+                console.log('❌ Tableau formule leucocytaire masqué (aucune donnée)');
+            } else {
+                if (formuleTitle) formuleTitle.style.display = '';
+                if (formuleTable) formuleTable.style.display = '';
+                console.log('✅ Tableau formule leucocytaire affiché');
+            }
+            
             console.log('🎯 MASQUAGE DIRECT - TERMINÉ');
+        }
+        
+        // Appeler masquerLignesVides plusieurs fois pour garantir l'exécution
+        if (typeof window !== 'undefined') {
+            // Appel immédiat
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('DOMContentLoaded - Appel masquerLignesVides');
+                setTimeout(masquerLignesVides, 50);
+                setTimeout(masquerLignesVides, 200);
+                setTimeout(masquerLignesVides, 500);
+                setTimeout(masquerLignesVides, 1000);
+            });
+            
+            // Appel au chargement complet
+            window.addEventListener('load', function() {
+                console.log('Window load - Appel masquerLignesVides');
+                setTimeout(masquerLignesVides, 50);
+                setTimeout(masquerLignesVides, 200);
+            });
         }
     </script>
 </body>
