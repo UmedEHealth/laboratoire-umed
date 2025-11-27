@@ -746,7 +746,7 @@
                         </div>
                     </div>
                     <div class="lab-right">
-                        <p><strong>Échantillon : <span id="type-echantillon">-</span></strong></p>
+                        <p><strong>Échantillon : <span id="type-echantillon-header">-</span></strong></p>
                         <p><strong>Age : <span id="patient-age-header">-</span></strong></p>
                         <br>
                         <p><strong>DEMANDE <span id="reference">-</span></strong></p>
@@ -773,7 +773,7 @@
                     <p><strong>Date de naissance :</strong> <span id="patient-dob">-</span> (<span
                             id="patient-age">-</span> ans) <strong>Sexe :</strong> <span id="patient-sexe">-</span></p>
                     
-                    <p><strong>Type d'échantillon :</strong> <span id="type-echantillon">-</span></p>
+                    <p><strong>Type d'échantillon :</strong> <span id="type-echantillon-detail">-</span></p>
                 </div>
             </div>
 
@@ -1537,7 +1537,10 @@
             document.getElementById('prescripteur').textContent = formData.prescripteur || 'Dr UMED';
             document.getElementById('date-prelevement').textContent = formData.datePrelevement || '-';
             document.getElementById('heure-prelevement').textContent = '-';
-            document.getElementById('type-echantillon').textContent = formData.typeEchantillon || '-';
+            // Populate both type-echantillon fields
+            const typeEchantillon = formData.typeEchantillon || '-';
+            document.getElementById('type-echantillon-header').textContent = typeEchantillon;
+            document.getElementById('type-echantillon-detail').textContent = typeEchantillon;
 
             if (formData.notesSupplementaires) {
                 document.getElementById('notes-supplementaires').textContent = formData.notesSupplementaires;

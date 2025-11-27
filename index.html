@@ -469,12 +469,12 @@
                     <i class="fas fa-folder-open"></i> Charger un dossier existant
                 </h5>
                 <p class="small mb-3" style="color: var(--umed-dark-blue);">
-                    <i class="fas fa-info-circle"></i> Selectionnez un patient et une date d'export pour modifier un dossier existant
+                    <i class="fas fa-info-circle"></i> Selectionnez un patient et une date de prélèvement pour modifier un dossier existant
                 </p>
                 <div class="row align-items-end">
                     <div class="col-md-8">
                         <label for="existing-patient-select" class="form-label" style="color: var(--umed-dark-blue); font-weight: 500;">
-                            <i class="fas fa-user"></i> Patient et Date d'Export
+                            <i class="fas fa-user"></i> Patient et Date de prélèvement 
                         </label>
                         <select class="form-select" id="existing-patient-select" size="1" style="border: 2px solid var(--umed-blue);">
                             <option value="" selected disabled>Cliquez sur "Actualiser" pour charger les dossiers</option>
@@ -499,7 +499,7 @@
                     <span class="ms-2" style="color: var(--umed-dark-blue);">Chargement des dossiers...</span>
                 </div>
                 <div id="edit-mode-indicator" class="mt-3 alert alert-info" style="display: none; background-color: var(--umed-light-blue); border: 1px solid var(--umed-blue); color: var(--umed-dark-blue);">
-                    <i class="fas fa-edit"></i> <strong>Mode modification :</strong> Les modifications seront enregistrees dans le dossier existant (identifie par nom, prenom et date d'export)
+                    <i class="fas fa-edit"></i> <strong>Mode modification :</strong> Les modifications seront enregistrees dans le dossier existant (identifie par nom, prenom et date de prélèvement)
                 </div>
             </div>
         </div>
@@ -1535,7 +1535,7 @@
             
             const formData = {
                 // Informations générales
-                // En mode édition, conserver la date d'export originale
+                // En mode édition, conserver la date d'export originale pour l'identification
                 dateExport: isEditMode && editingPatientInfo ? editingPatientInfo.dateExport : new Date().toLocaleDateString('fr-FR'),
                 heureExport: new Date().toLocaleTimeString('fr-FR'),
                 reference: 'UMED-' + Date.now(),
@@ -1653,7 +1653,7 @@
             // Images supprimées des nouvelles sections pour simplifier l'interface
 
             console.log('=== FORM DATA FINAL ===');
-            console.log('dateExport final:', formData.dateExport);
+            console.log('dateExport (pour identification):', formData.dateExport);
             console.log('patientNom:', formData.patientNom);
             console.log('patientPrenom:', formData.patientPrenom);
             
@@ -1875,7 +1875,7 @@
             try {
                 console.log('Tentative de sauvegarde Google Sheets...');
 
-                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9f3iPsqsiIDzmkjBMZJ5qL1_5Nh5kxP4UDfXVgnqFWxOexgF_D_DDMcOfE2_961QI/exec';
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwS36U5aNyvuhgQJ-D1R7kdzsh9Jh-EWMfztZJiw2XmPSkdVFqDx5fzqvVwWG9CUPGj/exec';
 
                 // Ajouter les informations de mode édition aux données
                 const dataToSend = {
@@ -2100,7 +2100,7 @@
         
         // Variable pour suivre le mode d'édition
         let isEditMode = false;
-        let editingPatientInfo = null; // Stocke {nom, prenom, dateExport} pour identifier la ligne à modifier
+        let editingPatientInfo = null; // Stocke {nom, prenom, dateExport} pour identifier la ligne à modifier dans la feuille
 
         // Fonction pour charger les patients existants depuis Google Sheets
         async function loadExistingPatients() {
@@ -2115,7 +2115,7 @@
                 refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Chargement...';
                 
                 // URL du Google Apps Script pour récupérer les données
-                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz9f3iPsqsiIDzmkjBMZJ5qL1_5Nh5kxP4UDfXVgnqFWxOexgF_D_DDMcOfE2_961QI/exec';
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwS36U5aNyvuhgQJ-D1R7kdzsh9Jh-EWMfztZJiw2XmPSkdVFqDx5fzqvVwWG9CUPGj/exec';
                 
                 // Faire la requête avec le paramètre action=getData
                 const response = await fetch(GOOGLE_SCRIPT_URL + '?action=getData', {
@@ -2138,8 +2138,8 @@
                     data.data.forEach((patient, index) => {
                         const option = document.createElement('option');
                         option.value = index;
-                        // Format: "NOM Prénom - Date d'export"
-                        const displayText = `${patient.patientNom || ''} ${patient.patientPrenom || ''} - ${patient.dateExport || 'Date inconnue'}`;
+                        // Format: "NOM Prénom - Date de prélèvement"
+                        const displayText = `${patient.patientNom || ''} ${patient.patientPrenom || ''} - ${patient.datePrelevement || 'Date inconnue'}`;
                         option.textContent = displayText;
                         selectElement.appendChild(option);
                     });
@@ -2195,10 +2195,26 @@
                 if (patientData.patientPrenom) document.getElementById('patient-firstname').value = patientData.patientPrenom;
                 if (patientData.patientAge) document.getElementById('patient-age').value = patientData.patientAge;
                 if (patientData.patientSexe) document.getElementById('patient-gender').value = patientData.patientSexe;
-                if (patientData.patientDateNaissance) document.getElementById('patient-dob').value = patientData.patientDateNaissance;
+                // Convert patientDateNaissance from DD/MM/YYYY to YYYY-MM-DD for date input
+                if (patientData.patientDateNaissance) {
+                    const dobParts = patientData.patientDateNaissance.split('/');
+                    if (dobParts.length === 3) {
+                        // Convert DD/MM/YYYY to YYYY-MM-DD
+                        const formattedDob = `${dobParts[2]}-${dobParts[1]}-${dobParts[0]}`;
+                        document.getElementById('patient-dob').value = formattedDob;
+                    }
+                }
                 if (patientData.patientAdresse) document.getElementById('patient-address').value = patientData.patientAdresse;
                 if (patientData.prescripteur) document.getElementById('prescripteur').value = patientData.prescripteur;
-                if (patientData.datePrelevement) document.getElementById('sample-date').value = patientData.datePrelevement;
+                // Convert datePrelevement from DD/MM/YYYY to YYYY-MM-DD for date input
+                if (patientData.datePrelevement) {
+                    const dateParts = patientData.datePrelevement.split('/');
+                    if (dateParts.length === 3) {
+                        // Convert DD/MM/YYYY to YYYY-MM-DD
+                        const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+                        document.getElementById('sample-date').value = formattedDate;
+                    }
+                }
                 if (patientData.typeEchantillon) document.getElementById('sample-type').value = patientData.typeEchantillon;
                 if (patientData.notesSupplementaires) document.getElementById('patient-notes').value = patientData.notesSupplementaires;
 
