@@ -1241,6 +1241,28 @@
                                                                 <td><input type="text" class="form-control"
                                                                         id="chlore-antecedent" name="chlore-antecedent"></td>
                                                             </tr>
+                                                            <tr>
+                                                                <td>Magnésium (Mg²⁺)</td>
+                                                                <td>
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="magnesium-result" name="magnesium-result"
+                                                                        onchange="validateValue(this, 0.7, 0.95)">
+                                                                </td>
+                                                                <td>(0.70 - 0.95 mmol/L)</td>
+                                                                <td><input type="text" class="form-control"
+                                                                        id="magnesium-antecedent" name="magnesium-antecedent"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Calcium (Ca²⁺)</td>
+                                                                <td>
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="calcium-result" name="calcium-result"
+                                                                        onchange="validateValue(this, 2.12, 2.62)">
+                                                                </td>
+                                                                <td>(2.12 - 2.62 mmol/L)</td>
+                                                                <td><input type="text" class="form-control"
+                                                                        id="calcium-antecedent" name="calcium-antecedent"></td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -1624,6 +1646,10 @@
                 potassiumAntecedent: document.getElementById('potassium-antecedent')?.value || '',
                 chloreResult: document.getElementById('chlore-result')?.value || '',
                 chloreAntecedent: document.getElementById('chlore-antecedent')?.value || '',
+                magnesiumResult: document.getElementById('magnesium-result')?.value || '',
+                magnesiumAntecedent: document.getElementById('magnesium-antecedent')?.value || '',
+                calciumResult: document.getElementById('calcium-result')?.value || '',
+                calciumAntecedent: document.getElementById('calcium-antecedent')?.value || '',
                 
                 biochimieComments: document.getElementById('biochimie-comments').value,
 
@@ -1833,6 +1859,10 @@
                 if (formData.acideUriqueAntecedent) document.getElementById('acide-urique-antecedent').value = formData.acideUriqueAntecedent;
                 if (formData.crpResult) document.getElementById('crp-result').value = formData.crpResult;
                 if (formData.crpAntecedent) document.getElementById('crp-antecedent').value = formData.crpAntecedent;
+                if (formData.magnesiumResult) document.getElementById('magnesium-result').value = formData.magnesiumResult;
+                if (formData.magnesiumAntecedent) document.getElementById('magnesium-antecedent').value = formData.magnesiumAntecedent;
+                if (formData.calciumResult) document.getElementById('calcium-result').value = formData.calciumResult;
+                if (formData.calciumAntecedent) document.getElementById('calcium-antecedent').value = formData.calciumAntecedent;
                 if (formData.biochimieComments) document.getElementById('biochimie-comments').value = formData.biochimieComments;
 
                 console.log('Formulaire rempli avec les données sauvegardées');
@@ -2314,6 +2344,14 @@
                 if (chloreResult && patientData.chloreResult) chloreResult.value = patientData.chloreResult;
                 const chloreAntecedent = document.getElementById('chlore-antecedent');
                 if (chloreAntecedent && patientData.chloreAntecedent) chloreAntecedent.value = patientData.chloreAntecedent;
+                const magnesiumResult = document.getElementById('magnesium-result');
+                if (magnesiumResult && patientData.magnesiumResult) magnesiumResult.value = patientData.magnesiumResult;
+                const magnesiumAntecedent = document.getElementById('magnesium-antecedent');
+                if (magnesiumAntecedent && patientData.magnesiumAntecedent) magnesiumAntecedent.value = patientData.magnesiumAntecedent;
+                const calciumResult = document.getElementById('calcium-result');
+                if (calciumResult && patientData.calciumResult) calciumResult.value = patientData.calciumResult;
+                const calciumAntecedent = document.getElementById('calcium-antecedent');
+                if (calciumAntecedent && patientData.calciumAntecedent) calciumAntecedent.value = patientData.calciumAntecedent;
 
                 // Remplir les autres examens si disponibles
                 const goutteEpaisseResult = document.getElementById('goutte-epaisse-result');

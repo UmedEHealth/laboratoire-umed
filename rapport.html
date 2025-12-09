@@ -388,6 +388,20 @@
             color: #000000;
         }
 
+        /* Style pour résultats critiques/positifs (Malaria, Dengue, HIV, etc.) */
+        .critical-positive {
+            color: #dc3545 !important;
+            font-weight: bold !important;
+            background-color: #fef9f9 !important;
+            border: 1.5px solid #f5b7b7 !important;
+            border-radius: 3px !important;
+        }
+
+        /* Style pour résultats négatifs (affichage normal en noir) */
+        .result-negative {
+            color: #000000 !important;
+            font-weight: normal !important;
+        }
 
         .report-footer {
             margin-top: 40px;
@@ -533,11 +547,19 @@
                 color: #000000 !important;
             }
 
-            /* FORCER la disposition de l'en-tête à l'impression avec des règles plus spécifiques */
-            .report-header {
-                display: block !important;
-                width: 100% !important;
-                margin-bottom: 20px !important;
+            /* Style critique/positif pour impression */
+            .critical-positive {
+                color: #dc3545 !important;
+                font-weight: bold !important;
+                background-color: #fef9f9 !important;
+                border: 1.5px solid #f5b7b7 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .result-negative {
+                color: #000000 !important;
+                font-weight: normal !important;
             }
 
             .lab-info {
@@ -1332,6 +1354,18 @@
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mmol/L</td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(98-107)</td>
                             </tr>
+                            <tr id="magnesium-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Magnésium (Mg²⁺)</strong></td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="magnesium-value">-</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mmol/L</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(0.70-0.95)</td>
+                            </tr>
+                            <tr id="calcium-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Calcium (Ca²⁺)</strong></td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="calcium-value">-</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mmol/L</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(2.12-2.62)</td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -1786,10 +1820,20 @@
 
             // Paludisme
             if (formData.paluResult && formData.paluResult !== '' && formData.showPaluInReport) {
-                document.getElementById('palu-result-cell').textContent = formData.paluResult;
+                const paluResultCell = document.getElementById('palu-result-cell');
+                paluResultCell.textContent = formData.paluResult;
                 document.getElementById('palu-comments-cell').textContent = formData.paluComments || '-';
                 paludismeRow.style.display = 'table-row';
                 hasParasitologieData = true;
+                
+                // Highlight critical positive results in red
+                if (formData.paluResult.toLowerCase() === 'positif') {
+                    paluResultCell.classList.add('critical-positive');
+                    paluResultCell.classList.remove('result-negative');
+                } else if (formData.paluResult.toLowerCase() === 'negatif') {
+                    paluResultCell.classList.add('result-negative');
+                    paluResultCell.classList.remove('critical-positive');
+                }
             } else {
                 paludismeRow.style.display = 'none';
             }
@@ -1836,9 +1880,19 @@
             // Sérologie Infectieuse - HIV
             const serologieSection = document.getElementById('serologie-section');
             if (formData.hivResult && formData.hivResult !== '' && formData.showHivInReport) {
-                document.getElementById('hiv-result-cell').textContent = formData.hivResult;
+                const hivResultCell = document.getElementById('hiv-result-cell');
+                hivResultCell.textContent = formData.hivResult;
                 document.getElementById('hiv-comments-cell').textContent = formData.hivComments || '-';
                 serologieSection.style.display = 'block';
+                
+                // Highlight critical positive results in red
+                if (formData.hivResult.toLowerCase() === 'positif') {
+                    hivResultCell.classList.add('critical-positive');
+                    hivResultCell.classList.remove('result-negative');
+                } else if (formData.hivResult.toLowerCase() === 'negatif') {
+                    hivResultCell.classList.add('result-negative');
+                    hivResultCell.classList.remove('critical-positive');
+                }
             } else {
                 serologieSection.style.display = 'none';
             }
@@ -1904,6 +1958,8 @@
             colorerValeurAnormale('sodium-value', formData.sodiumResult || '', 136, 145);
             colorerValeurAnormale('potassium-value', formData.potassiumResult || '', 3.4, 4.5);
             colorerValeurAnormale('chlore-value', formData.chloreResult || '', 98, 107);
+            colorerValeurAnormale('magnesium-value', formData.magnesiumResult || '', 0.7, 0.95);
+            colorerValeurAnormale('calcium-value', formData.calciumResult || '', 2.12, 2.62);
 
             // Vérifier si au moins une valeur biochimie est renseignée (incluant électrolytes)
             const biochimieSection = document.getElementById('biochimie-section');
@@ -1911,7 +1967,8 @@
                 formData.asatResult || formData.alatResult || formData.ggtResult ||
                 formData.cholesterolResult || formData.triglyceridesResult || formData.hdlResult ||
                 formData.ldlResult || formData.acideUriqueResult || formData.crpResult ||
-                formData.sodiumResult || formData.potassiumResult || formData.chloreResult;
+                formData.sodiumResult || formData.potassiumResult || formData.chloreResult ||
+                formData.magnesiumResult || formData.calciumResult;
 
             if (hasBiochimieData) {
                 biochimieSection.style.display = 'block';
@@ -1932,11 +1989,21 @@
         // Fonction pour remplir la section Goutte Épaisse
         function updateGoutteEpaisse(formData) {
             const section = document.getElementById('goutte-epaisse-section');
+            const resultElement = document.getElementById('goutte-epaisse-result');
             
             // Remplir les champs
-            document.getElementById('goutte-epaisse-result').textContent = 
+            resultElement.textContent = 
                 formData.goutteEpaisseResult === 'positive' ? 'Recherche positive' :
                 formData.goutteEpaisseResult === 'negative' ? 'Recherche négative' : '-';
+            
+            // Highlight critical positive results in red
+            if (formData.goutteEpaisseResult === 'positive') {
+                resultElement.classList.add('critical-positive');
+                resultElement.classList.remove('result-negative');
+            } else if (formData.goutteEpaisseResult === 'negative') {
+                resultElement.classList.add('result-negative');
+                resultElement.classList.remove('critical-positive');
+            }
             
             document.getElementById('goutte-epaisse-conclusion').textContent = 
                 formData.goutteEpaisseConclusion || 'Résultat contrôlé. À confronter aux données cliniques. En cas de discordance, faire un contrôle sur un nouveau prélèvement.';
@@ -1953,18 +2020,27 @@
         function updateSerologieArboviroses(formData) {
             const section = document.getElementById('serologie-arboviroses-section');
             
-            // Remplir les champs
-            document.getElementById('dengue-igg-result').textContent = 
-                formData.dengueIggResult === 'positive' ? 'Recherche positive' :
-                formData.dengueIggResult === 'negative' ? 'Recherche négative' : '-';
+            // Helper function to apply critical highlighting
+            function applyDengueHighlight(elementId, resultValue) {
+                const element = document.getElementById(elementId);
+                element.textContent = 
+                    resultValue === 'positive' ? 'Recherche positive' :
+                    resultValue === 'negative' ? 'Recherche négative' : '-';
                 
-            document.getElementById('dengue-igm-result').textContent = 
-                formData.dengueIgmResult === 'positive' ? 'Recherche positive' :
-                formData.dengueIgmResult === 'negative' ? 'Recherche négative' : '-';
-                
-            document.getElementById('dengue-antigene-result').textContent = 
-                formData.dengueAntigeneResult === 'positive' ? 'Recherche positive' :
-                formData.dengueAntigeneResult === 'negative' ? 'Recherche négative' : '-';
+                // Highlight critical positive results in red
+                if (resultValue === 'positive') {
+                    element.classList.add('critical-positive');
+                    element.classList.remove('result-negative');
+                } else if (resultValue === 'negative') {
+                    element.classList.add('result-negative');
+                    element.classList.remove('critical-positive');
+                }
+            }
+            
+            // Remplir les champs avec highlighting
+            applyDengueHighlight('dengue-igg-result', formData.dengueIggResult);
+            applyDengueHighlight('dengue-igm-result', formData.dengueIgmResult);
+            applyDengueHighlight('dengue-antigene-result', formData.dengueAntigeneResult);
             
             document.getElementById('serologie-dengue-conclusion').textContent = 
                 formData.serologieDengueConclusion || '';
@@ -2178,7 +2254,9 @@
                 { valueId: 'crp-value', rowId: 'crp-row' },
                 { valueId: 'sodium-value', rowId: 'sodium-row' },
                 { valueId: 'potassium-value', rowId: 'potassium-row' },
-                { valueId: 'chlore-value', rowId: 'chlore-row' }
+                { valueId: 'chlore-value', rowId: 'chlore-row' },
+                { valueId: 'magnesium-value', rowId: 'magnesium-row' },
+                { valueId: 'calcium-value', rowId: 'calcium-row' }
             ];
 
             // Liste des examens spécialisés
@@ -2357,7 +2435,7 @@
                 'glycemie-row', 'uree-row', 'creatinine-row', 'asat-row', 'alat-row', 
                 'ggt-row', 'cholesterol-row', 'triglycerides-row', 'hdl-row', 'ldl-row', 
                 'acide-urique-row', 'crp-row', 'sodium-row', 'potassium-row', 'chlore-row',
-                'procalcitonine-row'
+                'magnesium-row', 'calcium-row', 'procalcitonine-row'
             ];
             
             rowIds.forEach(rowId => {
@@ -2452,6 +2530,8 @@
             masquerSiVide('sodium-value', 'sodium-row');
             masquerSiVide('potassium-value', 'potassium-row');
             masquerSiVide('chlore-value', 'chlore-row');
+            masquerSiVide('magnesium-value', 'magnesium-row');
+            masquerSiVide('calcium-value', 'calcium-row');
             masquerSiVide('procalcitonine-value', 'procalcitonine-row');
             
             // Vérifier si le tableau hémogramme a des données visibles
