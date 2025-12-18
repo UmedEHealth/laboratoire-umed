@@ -1357,14 +1357,12 @@
                             <tr id="magnesium-row">
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>Magnésium (Mg²⁺)</strong></td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="magnesium-value">-</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mmol/L</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(0.70-0.95)</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mg/L</td><td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(18-25)</td>
                             </tr>
                             <tr id="calcium-row">
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>Calcium (Ca²⁺)</strong></td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="calcium-value">-</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mmol/L</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(2.12-2.62)</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mg/L</td><td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(84-104)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1958,8 +1956,8 @@
             colorerValeurAnormale('sodium-value', formData.sodiumResult || '', 136, 145);
             colorerValeurAnormale('potassium-value', formData.potassiumResult || '', 3.4, 4.5);
             colorerValeurAnormale('chlore-value', formData.chloreResult || '', 98, 107);
-            colorerValeurAnormale('magnesium-value', formData.magnesiumResult || '', 0.7, 0.95);
-            colorerValeurAnormale('calcium-value', formData.calciumResult || '', 2.12, 2.62);
+            colorerValeurAnormale('magnesium-value', formData.magnesiumResult || '', 18, 25);
+            colorerValeurAnormale('calcium-value', formData.calciumResult || '', 84, 104);
 
             // Vérifier si au moins une valeur biochimie est renseignée (incluant électrolytes)
             const biochimieSection = document.getElementById('biochimie-section');
