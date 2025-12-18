@@ -749,6 +749,12 @@
                                                             <textarea class="form-control" id="groupe-sanguin-comments"
                                                                 rows="2"></textarea>
                                                         </div>
+                                                        <div class="form-check mt-2">
+                                                            <input class="form-check-input" type="checkbox" id="show-groupe-sanguin-in-report" checked>
+                                                            <label class="form-check-label" for="show-groupe-sanguin-in-report">
+                                                                Afficher dans le rapport
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1604,6 +1610,7 @@
                 showPaluInReport: document.getElementById('show-palu-in-report').checked,
                 showDengueInReport: document.getElementById('show-dengue-in-report').checked,
                 showHivInReport: document.getElementById('show-hiv-in-report').checked,
+                showGroupeSanguinInReport: document.getElementById('show-groupe-sanguin-in-report').checked,
 
                 // Immuno-Hématologie - Groupe Sanguin
                 groupeSanguinResult: document.getElementById('groupe-sanguin-result').value,
@@ -1829,6 +1836,7 @@
                 // Immuno-Hématologie - Groupe Sanguin
                 if (formData.groupeSanguinResult) document.getElementById('groupe-sanguin-result').value = formData.groupeSanguinResult;
                 if (formData.groupeSanguinComments) document.getElementById('groupe-sanguin-comments').value = formData.groupeSanguinComments;
+                if (formData.showGroupeSanguinInReport !== undefined) document.getElementById('show-groupe-sanguin-in-report').checked = formData.showGroupeSanguinInReport;
 
                 // Sérologie Infectieuse - HIV
                 if (formData.hivResult) document.getElementById('hiv-result').value = formData.hivResult;
@@ -2296,6 +2304,7 @@
                 // Remplir les données d'immuno-hématologie
                 if (patientData.groupeSanguinResult) document.getElementById('groupe-sanguin-result').value = patientData.groupeSanguinResult;
                 if (patientData.groupeSanguinComments) document.getElementById('groupe-sanguin-comments').value = patientData.groupeSanguinComments;
+                if (patientData.showGroupeSanguinInReport !== undefined) document.getElementById('show-groupe-sanguin-in-report').checked = patientData.showGroupeSanguinInReport;
 
                 // Remplir les données de sérologie infectieuse
                 if (patientData.hivResult) {

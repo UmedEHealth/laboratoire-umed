@@ -1867,7 +1867,7 @@
 
             // Immuno-Hématologie - Groupe Sanguin
             const immunoSection = document.getElementById('immuno-hematologie-section');
-            if (formData.groupeSanguinResult && formData.groupeSanguinResult !== '') {
+            if (formData.groupeSanguinResult && formData.groupeSanguinResult !== '' && formData.showGroupeSanguinInReport !== false) {
                 document.getElementById('groupe-sanguin-result-cell').textContent = formData.groupeSanguinResult;
                 document.getElementById('groupe-sanguin-comments-cell').textContent = formData.groupeSanguinComments || '-';
                 immunoSection.style.display = 'block';
