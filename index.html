@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#3498db">
@@ -133,8 +133,9 @@
 
             .form-control,
             .form-select {
-                padding: 8px;
-                font-size: 0.9rem;
+                padding: 10px;
+                font-size: 0.95rem;
+                min-height: 44px;
             }
 
             .row {
@@ -158,6 +159,30 @@
                 font-size: 1.3rem;
                 margin: 15px 0;
             }
+
+            /* Tables: prevent overflow, allow text wrapping */
+            .table-responsive {
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .table td,
+            .table th {
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            /* Save button wider on tablet */
+            #saveAllButton {
+                width: 60%;
+                min-width: 200px;
+                padding: 12px 20px;
+                font-size: 1.05rem;
+            }
+
+            /* Textarea full width */
+            textarea.form-control {
+                min-height: 60px;
+            }
         }
 
         /* Styles spécifiques pour les tablettes */
@@ -175,10 +200,33 @@
             .page-title {
                 font-size: 1.5rem;
             }
+
+            /* Keep 2-column layout for form fields on tablets */
+            .row > .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .row > .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .row > .col-md-12 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
 
-        /* Styles pour les très petits écrans (smartphones) */
+        /* Styles pour les smartphones (max 480px) */
         @media (max-width: 480px) {
+            /* Stack all form columns on phones */
+            .row > .col-md-6,
+            .row > .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
             .accordion-button {
                 font-size: 0.85rem;
                 padding: 10px 12px;
@@ -194,8 +242,9 @@
 
             .form-control,
             .form-select {
-                padding: 6px;
-                font-size: 0.85rem;
+                padding: 8px;
+                font-size: 0.9rem;
+                min-height: 44px;
             }
 
             .page-title {
@@ -212,8 +261,8 @@
             }
 
             .btn {
-                padding: 0.375rem 0.5rem;
-                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
+                font-size: 0.9rem;
             }
 
             .container {
@@ -227,6 +276,98 @@
 
             .checkbox-container label {
                 font-size: 0.85rem;
+            }
+
+            /* Save button full-width on mobile */
+            #saveAllButton {
+                width: 100%;
+                padding: 14px 20px;
+                font-size: 1.1rem;
+            }
+
+            /* Table selects: full width and proper touch size */
+            .table .form-select {
+                min-width: 130px;
+                min-height: 44px;
+                font-size: 0.9rem;
+            }
+
+            /* Better touch targets for checkboxes */
+            .form-check {
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            .form-check-label {
+                font-size: 0.9rem;
+                padding-left: 4px;
+            }
+
+            /* Section headings */
+            .analysis-section h4,
+            .analysis-section h5 {
+                font-size: 1rem;
+            }
+
+            /* Conditional options less indent on mobile */
+            .conditional-options {
+                margin-left: 15px;
+            }
+        }
+
+        /* Styles pour les très petits écrans (< 360px) */
+        @media (max-width: 360px) {
+            .navbar-brand img {
+                width: 75px;
+            }
+
+            .page-title {
+                font-size: 1.05rem;
+                margin: 10px 0;
+            }
+
+            .accordion-button {
+                font-size: 0.78rem;
+                padding: 8px 10px;
+                letter-spacing: 0.3px;
+            }
+
+            .accordion-body {
+                padding: 10px 8px;
+            }
+
+            .container {
+                padding-right: 5px;
+                padding-left: 5px;
+            }
+
+            .form-container {
+                padding: 10px;
+            }
+
+            .analysis-section {
+                padding: 8px;
+            }
+
+            .form-label {
+                font-size: 0.8rem;
+            }
+
+            .form-control,
+            .form-select {
+                font-size: 0.85rem;
+                padding: 7px;
+            }
+
+            .table td,
+            .table th {
+                padding: 6px 4px;
+                font-size: 0.8rem;
+            }
+
+            .table .form-select {
+                min-width: 110px;
+                font-size: 0.82rem;
             }
         }
 
@@ -364,32 +505,27 @@
         }
 
         .accordion-button:not(.collapsed) {
-            background: linear-gradient(135deg, var(--umed-blue), var(--umed-dark-blue));
+            background: var(--umed-blue);
             color: white;
-            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
-            transform: translateY(-2px);
         }
 
         .accordion-button:hover {
-            background: linear-gradient(135deg, var(--umed-light-blue), #d6eaf8);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            background: var(--umed-light-blue);
         }
 
         .accordion-button:not(.collapsed):hover {
-            background: linear-gradient(135deg, var(--umed-dark-blue), #1f618d);
+            background: var(--umed-dark-blue);
         }
 
         .accordion-item {
-            border: none;
-            margin-bottom: 20px;
-            border-radius: 15px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 10px;
+            border-radius: 5px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .accordion-body {
-            padding: 30px;
+            padding: 20px;
             background-color: white;
         }
 
@@ -417,34 +553,6 @@
 
         .accordion-button.collapsed::after {
             transform: rotate(0deg);
-        }
-
-        .accordion-button:not(.collapsed) {
-            background: var(--umed-blue);
-            color: white;
-        }
-
-        .accordion-button:hover {
-            background: var(--umed-light-blue);
-        }
-
-        .accordion-button:not(.collapsed):hover {
-            background: var(--umed-dark-blue);
-        }
-
-        .accordion-item {
-            border: 1px solid #dee2e6;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-
-        .accordion-body {
-            padding: 20px;
-            background-color: white;
-        }
-
-        .accordion-header {
-            margin-bottom: 0;
         }
     </style>
 </head>
