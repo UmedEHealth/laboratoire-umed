@@ -1983,6 +1983,37 @@
             }
         }
 
+        // Fonction de coloration ACTIVE - mise en rouge des valeurs anormales
+        // Définie au niveau global pour être accessible depuis fillReport ET les fonctions update externes
+        function colorerValeurAnormale(elementId, valeur, min, max) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                // Ne pas écraser le contenu si la valeur est vide (préserve le '-' déjà défini)
+                if (valeur !== '' && valeur !== '-') {
+                    element.textContent = valeur;
+                }
+                element.style.fontWeight = 'bold';
+
+                // Valider seulement si la valeur n'est pas vide ou "-"
+                if (valeur !== '-' && valeur !== '') {
+                    const numValue = parseFloat(valeur.toString().replace(',', '.'));
+
+                    if (!isNaN(numValue)) {
+                        // Vérifier si la valeur est hors de l'intervalle
+                        if (numValue < min || numValue > max) {
+                            element.classList.add('abnormal-value');
+                            element.classList.remove('normal-value');
+                            console.log(`⚠️ VALEUR ANORMALE: ${elementId} = ${valeur} (intervalle: ${min}-${max})`);
+                        } else {
+                            element.classList.add('normal-value');
+                            element.classList.remove('abnormal-value');
+                            console.log(`✓ Valeur normale: ${elementId} = ${valeur}`);
+                        }
+                    }
+                }
+            }
+        }
+
         // Fonction pour remplir le rapport avec les données
         function fillReport() {
             const formData = getFormData();
@@ -2080,35 +2111,7 @@
                 }
             }
 
-            // Fonction de coloration ACTIVE - mise en rouge des valeurs anormales
-            function colorerValeurAnormale(elementId, valeur, min, max) {
-                const element = document.getElementById(elementId);
-                if (element) {
-                    // Ne pas écraser le contenu si la valeur est vide (préserve le '-' déjà défini)
-                    if (valeur !== '' && valeur !== '-') {
-                        element.textContent = valeur;
-                    }
-                    element.style.fontWeight = 'bold';
-
-                    // Valider seulement si la valeur n'est pas vide ou "-"
-                    if (valeur !== '-' && valeur !== '') {
-                        const numValue = parseFloat(valeur.toString().replace(',', '.'));
-                        
-                        if (!isNaN(numValue)) {
-                            // Vérifier si la valeur est hors de l'intervalle
-                            if (numValue < min || numValue > max) {
-                                element.classList.add('abnormal-value');
-                                element.classList.remove('normal-value');
-                                console.log(`⚠️ VALEUR ANORMALE: ${elementId} = ${valeur} (intervalle: ${min}-${max})`);
-                            } else {
-                                element.classList.add('normal-value');
-                                element.classList.remove('abnormal-value');
-                                console.log(`✓ Valeur normale: ${elementId} = ${valeur}`);
-                            }
-                        }
-                    }
-                }
-            }
+            // colorerValeurAnormale est définie au niveau global (avant fillReport)
 
             // Appliquer la coloration pour chaque valeur avec les intervalles de référence "Hommes/Femmes"
             colorerValeurAnormale('leucocytes-value', leucocytesValue, 4, 10);
