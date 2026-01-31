@@ -805,6 +805,248 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Hépatite B -->
+                                                <div class="col-md-12 mt-4">
+                                                    <h5>Hépatite B</h5>
+                                                    <div class="mb-3">
+                                                        <label for="hepatite-b-result" class="form-label">Anti-HBs (Anticorps anti-HBs)</label>
+                                                        <select class="form-select" id="hepatite-b-result"
+                                                            onchange="toggleCommentaires('hepatite-b-result', 'hepatite-b-comments-container')">
+                                                            <option value="" selected disabled>Sélectionner</option>
+                                                            <option value="positif">Positif</option>
+                                                            <option value="negatif">Négatif</option>
+                                                        </select>
+                                                        <div class="form-check mt-2">
+                                                            <input class="form-check-input" type="checkbox" id="show-hepatite-b-in-report">
+                                                            <label class="form-check-label" for="show-hepatite-b-in-report">
+                                                                Afficher Hépatite B dans le rapport
+                                                            </label>
+                                                        </div>
+                                                        <div id="hepatite-b-comments-container" class="mt-3" style="display: none;">
+                                                            <label for="hepatite-b-comments" class="form-label">Commentaires Hépatite B</label>
+                                                            <textarea class="form-control" id="hepatite-b-comments" rows="2"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Hépatite C -->
+                                                <div class="col-md-12 mt-4">
+                                                    <h5>Hépatite C</h5>
+                                                    <div class="mb-3">
+                                                        <label for="hepatite-c-result" class="form-label">Anti-HCV (Anticorps anti-VHC)</label>
+                                                        <select class="form-select" id="hepatite-c-result"
+                                                            onchange="toggleCommentaires('hepatite-c-result', 'hepatite-c-comments-container')">
+                                                            <option value="" selected disabled>Sélectionner</option>
+                                                            <option value="positif">Positif</option>
+                                                            <option value="negatif">Négatif</option>
+                                                        </select>
+                                                        <div class="form-check mt-2">
+                                                            <input class="form-check-input" type="checkbox" id="show-hepatite-c-in-report">
+                                                            <label class="form-check-label" for="show-hepatite-c-in-report">
+                                                                Afficher Hépatite C dans le rapport
+                                                            </label>
+                                                        </div>
+                                                        <div id="hepatite-c-comments-container" class="mt-3" style="display: none;">
+                                                            <label for="hepatite-c-comments" class="form-label">Commentaires Hépatite C</label>
+                                                            <textarea class="form-control" id="hepatite-c-comments" rows="2"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Rubéole -->
+                                                <div class="col-md-12 mt-4">
+                                                    <h5>Rubéole</h5>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="rubeole-igg-result" class="form-label">IgG anti-Rubéole</label>
+                                                            <select class="form-select" id="rubeole-igg-result">
+                                                                <option value="" selected disabled>Sélectionner</option>
+                                                                <option value="positif">Positif</option>
+                                                                <option value="negatif">Négatif</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="rubeole-igm-result" class="form-label">IgM anti-Rubéole</label>
+                                                            <select class="form-select" id="rubeole-igm-result">
+                                                                <option value="" selected disabled>Sélectionner</option>
+                                                                <option value="positif">Positif</option>
+                                                                <option value="negatif">Négatif</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" id="show-rubeole-in-report">
+                                                        <label class="form-check-label" for="show-rubeole-in-report">
+                                                            Afficher Rubéole dans le rapport
+                                                        </label>
+                                                    </div>
+                                                    <div id="rubeole-comments-container" class="mt-3">
+                                                        <label for="rubeole-comments" class="form-label">Commentaires Rubéole</label>
+                                                        <textarea class="form-control" id="rubeole-comments" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Toxoplasmose -->
+                                                <div class="col-md-12 mt-4">
+                                                    <h5>Toxoplasmose</h5>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="toxoplasmose-igg-result" class="form-label">IgG anti-Toxoplasma</label>
+                                                            <select class="form-select" id="toxoplasmose-igg-result">
+                                                                <option value="" selected disabled>Sélectionner</option>
+                                                                <option value="positif">Positif</option>
+                                                                <option value="negatif">Négatif</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="toxoplasmose-igm-result" class="form-label">IgM anti-Toxoplasma</label>
+                                                            <select class="form-select" id="toxoplasmose-igm-result">
+                                                                <option value="" selected disabled>Sélectionner</option>
+                                                                <option value="positif">Positif</option>
+                                                                <option value="negatif">Négatif</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-check mt-2">
+                                                        <input class="form-check-input" type="checkbox" id="show-toxoplasmose-in-report">
+                                                        <label class="form-check-label" for="show-toxoplasmose-in-report">
+                                                            Afficher Toxoplasmose dans le rapport
+                                                        </label>
+                                                    </div>
+                                                    <div id="toxoplasmose-comments-container" class="mt-3">
+                                                        <label for="toxoplasmose-comments" class="form-label">Commentaires Toxoplasmose</label>
+                                                        <textarea class="form-control" id="toxoplasmose-comments" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Sérologie Widal & Félix -->
+                                            <div class="col-md-12 mt-4">
+                                                <h5>Sérologie Widal & Félix</h5>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Antigène</th>
+                                                                <th>Résultat</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Salmonella Typhi O</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-typhi-o">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Typhi H</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-typhi-h">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Paratyphi AO</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-paratyphi-ao">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Paratyphi AH</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-paratyphi-ah">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Paratyphi BO</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-paratyphi-bo">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Paratyphi BH</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-paratyphi-bh">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Paratyphi CO</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-paratyphi-co">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Paratyphi CH</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-paratyphi-ch">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Enteridis H</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-enteridis-h">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Salmonella Thyphi Mutrium H</td>
+                                                                <td>
+                                                                    <select class="form-select" id="widal-thyphi-mutrium-h">
+                                                                        <option value="">Sélectionner...</option>
+                                                                        <option value="positif">Positif</option>
+                                                                        <option value="negatif">Négatif</option>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="widal-conclusion" class="form-label">Conclusion</label>
+                                                    <textarea class="form-control" id="widal-conclusion" rows="2"
+                                                        placeholder="Ex: Sérologie négative"></textarea>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" id="show-widal-in-report" checked>
+                                                    <label class="form-check-label" for="show-widal-in-report">
+                                                        Afficher Widal & Félix dans le rapport
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
@@ -1172,9 +1414,9 @@
                                                                     <input type="number" step="0.01"
                                                                         class="form-control" id="hdl-result"
                                                                         name="hdl-result"
-                                                                        onchange="validateValue(this, 0.6, 999)">
+                                                                        onchange="validateValue(this, 0.4, 999)">
                                                                 </td>
-                                                                <td>(>0.60 g/L)</td>
+                                                                <td>(H>0.40, F>0.50; ≥0.60 prot.)</td>
                                                                 <td><input type="text" class="form-control"
                                                                         id="hdl-antecedent" name="hdl-antecedent"></td>
                                                             </tr>
@@ -1230,9 +1472,9 @@
                                                                 <td>
                                                                     <input type="number" step="0.01" class="form-control"
                                                                         id="potassium-result" name="potassium-result"
-                                                                        onchange="validateValue(this, 3.4, 4.5)">
+                                                                        onchange="validateValue(this, 3.5, 5.0)">
                                                                 </td>
-                                                                <td>(3.4-4.5 mmol/L)</td>
+                                                                <td>(3.5-5.0 mmol/L)</td>
                                                                 <td><input type="text" class="form-control"
                                                                         id="potassium-antecedent" name="potassium-antecedent"></td>
                                                             </tr>
@@ -1252,9 +1494,9 @@
                                                                 <td>
                                                                     <input type="number" step="0.1" class="form-control"
                                                                         id="magnesium-result" name="magnesium-result"
-                                                                        onchange="validateValue(this, 18, 25)">
+                                                                        onchange="validateValue(this, 17, 24)">
                                                                 </td>
-                                                                <td>(18 - 25 mg/L)</td>
+                                                                <td>(17-24 mg/L)</td>
                                                                 <td><input type="text" class="form-control"
                                                                         id="magnesium-antecedent" name="magnesium-antecedent"></td>
                                                             </tr>
@@ -1263,11 +1505,33 @@
                                                                 <td>
                                                                     <input type="number" step="1" class="form-control"
                                                                         id="calcium-result" name="calcium-result"
-                                                                        onchange="validateValue(this, 84, 104)">
+                                                                        onchange="validateValue(this, 88, 105)">
                                                                 </td>
-                                                                <td>(84 - 104 mg/L)</td>
+                                                                <td>(88-105 mg/L)</td>
                                                                 <td><input type="text" class="form-control"
                                                                         id="calcium-antecedent" name="calcium-antecedent"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>HbA1c (Hémoglobine Glyquée)</td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="hba1c-result" name="hba1c-result"
+                                                                        onchange="validateValue(this, 4.0, 6.0)">
+                                                                </td>
+                                                                <td>(<5.7% N; 5.7-6.4% prédiab; ≥6.5% diab; <7% ctrl)</td>
+                                                                <td><input type="text" class="form-control"
+                                                                        id="hba1c-antecedent" name="hba1c-antecedent"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Clairance de la Créatinine (Cockroft)</td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="clairance-creatinine-result" name="clairance-creatinine-result"
+                                                                        onchange="validateValue(this, 90, 120)">
+                                                                </td>
+                                                                <td>(90-120 mL/min; <60=IR)</td>
+                                                                <td><input type="text" class="form-control"
+                                                                        id="clairance-creatinine-antecedent" name="clairance-creatinine-antecedent"></td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -1277,6 +1541,148 @@
                                                         class="form-label">Commentaires</label>
                                                     <textarea class="form-control" id="biochimie-comments"
                                                         name="biochimie-comments" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Électrophorèse des Protéines Sériques -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingElectrophorese">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseElectrophorese" aria-expanded="false"
+                                    aria-controls="collapseElectrophorese">
+                                    <i class="fas fa-chart-area me-2"></i>Électrophorèse des Protéines Sériques
+                                </button>
+                            </h2>
+                            <div id="collapseElectrophorese" class="accordion-collapse collapse"
+                                aria-labelledby="headingElectrophorese" data-bs-parent="#mainAccordion">
+                                <div class="accordion-body">
+                                    <form id="electrophorese-form">
+                                        <div class="card mb-4">
+                                            <div class="card-header bg-primary text-white">
+                                                <h5 class="mb-0">ÉLECTROPHORÈSE DES PROTÉINES SÉRIQUES</h5>
+                                                <small>Analyse par électrophorèse capillaire</small>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Fraction</th>
+                                                                <th>Résultat (g/L)</th>
+                                                                <th>Résultat (%)</th>
+                                                                <th>Valeur de référence</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Albumine</td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="albumine-gl-result" name="albumine-gl-result"
+                                                                        onchange="validateValue(this, 35, 50)">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="albumine-pct-result" name="albumine-pct-result"
+                                                                        onchange="validateValue(this, 55, 65)">
+                                                                </td>
+                                                                <td>(35-50 g/L ou 55-65%)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Alpha-1 Globulines</td>
+                                                                <td>
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="alpha1-gl-result" name="alpha1-gl-result"
+                                                                        onchange="validateValue(this, 1, 4)">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="alpha1-pct-result" name="alpha1-pct-result"
+                                                                        onchange="validateValue(this, 2, 5)">
+                                                                </td>
+                                                                <td>(1-4 g/L ou 2-5%)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Alpha-2 Globulines</td>
+                                                                <td>
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="alpha2-gl-result" name="alpha2-gl-result"
+                                                                        onchange="validateValue(this, 4, 8)">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="alpha2-pct-result" name="alpha2-pct-result"
+                                                                        onchange="validateValue(this, 7, 13)">
+                                                                </td>
+                                                                <td>(4-8 g/L ou 7-13%)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Bêta Globulines</td>
+                                                                <td>
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="beta-gl-result" name="beta-gl-result"
+                                                                        onchange="validateValue(this, 5, 10)">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="beta-pct-result" name="beta-pct-result"
+                                                                        onchange="validateValue(this, 8, 14)">
+                                                                </td>
+                                                                <td>(5-10 g/L ou 8-14%)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Gamma Globulines</td>
+                                                                <td>
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="gamma-gl-result" name="gamma-gl-result"
+                                                                        onchange="validateValue(this, 6, 16)">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="gamma-pct-result" name="gamma-pct-result"
+                                                                        onchange="validateValue(this, 10, 20)">
+                                                                </td>
+                                                                <td>(6-16 g/L ou 10-20%)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Protéines Totales</strong></td>
+                                                                <td colspan="2">
+                                                                    <input type="number" step="0.1" class="form-control"
+                                                                        id="proteines-totales-result" name="proteines-totales-result"
+                                                                        onchange="validateValue(this, 60, 80)">
+                                                                </td>
+                                                                <td>(60-80 g/L)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>Rapport Albumine/Globulines</strong></td>
+                                                                <td colspan="2">
+                                                                    <input type="number" step="0.01" class="form-control"
+                                                                        id="rapport-ag-result" name="rapport-ag-result"
+                                                                        onchange="validateValue(this, 1.0, 2.2)">
+                                                                </td>
+                                                                <td>(1.0-2.2)</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <label for="electrophorese-comments" class="form-label">Commentaires / Interprétation</label>
+                                                        <textarea class="form-control" id="electrophorese-comments"
+                                                            name="electrophorese-comments" rows="3"
+                                                            placeholder="Interprétation de l'électrophorèse..."></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" id="show-electrophorese-in-report" checked>
+                                                    <label class="form-check-label" for="show-electrophorese-in-report">
+                                                        Afficher l'électrophorèse dans le rapport
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
@@ -1460,6 +1866,238 @@
                             </div>
                         </div>
 
+                        <!-- ECBU -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEcbu">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseEcbu" aria-expanded="false"
+                                    aria-controls="collapseEcbu">
+                                    ECBU - Examen Cytobactériologique des Urines
+                                </button>
+                            </h2>
+                            <div id="collapseEcbu" class="accordion-collapse collapse"
+                                aria-labelledby="headingEcbu" data-bs-parent="#analysisAccordion">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">ECBU</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="ecbu-recueil" class="form-label">Recueil</label>
+                                                        <input type="text" class="form-control" id="ecbu-recueil" placeholder="Ex: Milieu du jet">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="ecbu-aspect" class="form-label">Aspect</label>
+                                                        <input type="text" class="form-control" id="ecbu-aspect" placeholder="Ex: Légèrement trouble jaune">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Recherche biochimique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-ph" class="form-label">pH (réf: 7-8)</label>
+                                                        <input type="number" step="0.1" class="form-control" id="ecbu-ph" placeholder="7-8">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Examen cytologique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-leucocytes" class="form-label">Leucocytes (/mm3)</label>
+                                                        <input type="text" class="form-control" id="ecbu-leucocytes" placeholder="Ex: 4">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-hematies" class="form-label">Hématies</label>
+                                                        <input type="text" class="form-control" id="ecbu-hematies" placeholder="Ex: <1 /mm3">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-cellules-epitheliales" class="form-label">Cellules épithéliales</label>
+                                                        <input type="text" class="form-control" id="ecbu-cellules-epitheliales" placeholder="Ex: Absence">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-cylindres" class="form-label">Cylindres</label>
+                                                        <input type="text" class="form-control" id="ecbu-cylindres" placeholder="Ex: Absence">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-cristaux" class="form-label">Cristaux</label>
+                                                        <input type="text" class="form-control" id="ecbu-cristaux" placeholder="Ex: Absence">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="ecbu-examen-direct" class="form-label">Examen direct</label>
+                                                        <input type="text" class="form-control" id="ecbu-examen-direct" placeholder="Ex: Absence de germes">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Examen bactériologique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="ecbu-cultures" class="form-label">Cultures</label>
+                                                        <input type="text" class="form-control" id="ecbu-cultures" placeholder="Ex: Cultures négatives">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="ecbu-conclusion" class="form-label">Conclusion</label>
+                                                        <textarea class="form-control" id="ecbu-conclusion" rows="2"
+                                                            placeholder="Ex: Absence de germes pathogènes"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" id="show-ecbu-in-report" checked>
+                                                    <label class="form-check-label" for="show-ecbu-in-report">
+                                                        Afficher ECBU dans le rapport
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Examen Parasitologique des Selles -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingParasitoSelles">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseParasitoSelles" aria-expanded="false"
+                                    aria-controls="collapseParasitoSelles">
+                                    Examen Parasitologique des Selles
+                                </button>
+                            </h2>
+                            <div id="collapseParasitoSelles" class="accordion-collapse collapse"
+                                aria-labelledby="headingParasitoSelles" data-bs-parent="#analysisAccordion">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">EXAMEN PARASITOLOGIQUE DES SELLES</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="parasito-selles-aspect" class="form-label">Aspect</label>
+                                                        <input type="text" class="form-control" id="parasito-selles-aspect" placeholder="Ex: Molles brunes">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Examen cytologique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="parasito-selles-cellules" class="form-label">Cellules épithéliales</label>
+                                                        <input type="text" class="form-control" id="parasito-selles-cellules" placeholder="Ex: Rares">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="parasito-selles-leucocytes" class="form-label">Leucocytes</label>
+                                                        <input type="text" class="form-control" id="parasito-selles-leucocytes" placeholder="Ex: 01 à 02 / champs">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="parasito-selles-hematies" class="form-label">Hématies</label>
+                                                        <input type="text" class="form-control" id="parasito-selles-hematies" placeholder="Ex: Absence">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="parasito-selles-charcot" class="form-label">Cristaux de Charcot-Leyden</label>
+                                                        <input type="text" class="form-control" id="parasito-selles-charcot" placeholder="Ex: Absence">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Examen parasitologique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <label for="parasito-selles-microscopique" class="form-label">Examen microscopique</label>
+                                                        <textarea class="form-control" id="parasito-selles-microscopique" rows="2"
+                                                            placeholder="Ex: Absence d'oeufs, de kystes ou de formes végétatives de parasites"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <label for="parasito-selles-enrichissement" class="form-label">Après enrichissement</label>
+                                                        <textarea class="form-control" id="parasito-selles-enrichissement" rows="2"
+                                                            placeholder="Ex: Absence d'oeufs, de kystes ou de formes végétatives de parasites"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" id="show-parasito-selles-in-report" checked>
+                                                    <label class="form-check-label" for="show-parasito-selles-in-report">
+                                                        Afficher dans le rapport
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coproculture -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingCoproculture">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseCoproculture" aria-expanded="false"
+                                    aria-controls="collapseCoproculture">
+                                    Coproculture
+                                </button>
+                            </h2>
+                            <div id="collapseCoproculture" class="accordion-collapse collapse"
+                                aria-labelledby="headingCoproculture" data-bs-parent="#analysisAccordion">
+                                <div class="accordion-body">
+                                    <form>
+                                        <div class="card">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">COPROCULTURE</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="coproculture-aspect" class="form-label">Aspect</label>
+                                                        <input type="text" class="form-control" id="coproculture-aspect" placeholder="Ex: Molles brunes">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Examen cytologique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <label for="coproculture-cellules" class="form-label">Cellules épithéliales</label>
+                                                        <input type="text" class="form-control" id="coproculture-cellules" placeholder="Ex: Rares">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="coproculture-leucocytes" class="form-label">Leucocytes</label>
+                                                        <input type="text" class="form-control" id="coproculture-leucocytes" placeholder="Ex: 01 à 02 / champs">
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label for="coproculture-hematies" class="form-label">Hématies</label>
+                                                        <input type="text" class="form-control" id="coproculture-hematies" placeholder="Ex: Absence">
+                                                    </div>
+                                                </div>
+                                                <h6 class="mt-3">Examen bactériologique</h6>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="coproculture-gram-negatifs" class="form-label">Flore Gram Négatifs (%, réf: >60)</label>
+                                                        <input type="number" step="0.1" class="form-control" id="coproculture-gram-negatifs" placeholder=">60%">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="coproculture-gram-positifs" class="form-label">Flore Gram Positifs (%, réf: >35)</label>
+                                                        <input type="number" step="0.1" class="form-control" id="coproculture-gram-positifs" placeholder=">35%">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <label for="coproculture-cultures" class="form-label">Cultures</label>
+                                                        <textarea class="form-control" id="coproculture-cultures" rows="2"
+                                                            placeholder="Ex: Absence de germes pathogènes (Salmonelle, Shigelle, E. coli GEI, Campylobacter et Yersinia)"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mt-2">
+                                                    <input class="form-check-input" type="checkbox" id="show-coproculture-in-report" checked>
+                                                    <label class="form-check-label" for="show-coproculture-in-report">
+                                                        Afficher Coproculture dans le rapport
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Bouton Enregistrer final -->
                         <div class="d-flex justify-content-center mt-4 mb-5">
                             <button type="button" class="btn btn-umed btn-lg" id="saveAllButton">Enregistrer</button>
@@ -1620,6 +2258,76 @@
                 hivResult: document.getElementById('hiv-result').value,
                 hivComments: document.getElementById('hiv-comments').value,
 
+                // Sérologie Infectieuse - Hépatite B
+                hepatiteBResult: document.getElementById('hepatite-b-result')?.value || '',
+                hepatiteBComments: document.getElementById('hepatite-b-comments')?.value || '',
+                showHepatiteBInReport: document.getElementById('show-hepatite-b-in-report')?.checked || false,
+
+                // Sérologie Infectieuse - Hépatite C
+                hepatiteCResult: document.getElementById('hepatite-c-result')?.value || '',
+                hepatiteCComments: document.getElementById('hepatite-c-comments')?.value || '',
+                showHepatiteCInReport: document.getElementById('show-hepatite-c-in-report')?.checked || false,
+
+                // Sérologie Infectieuse - Rubéole
+                rubeoleIggResult: document.getElementById('rubeole-igg-result')?.value || '',
+                rubeoleIgmResult: document.getElementById('rubeole-igm-result')?.value || '',
+                rubeoleComments: document.getElementById('rubeole-comments')?.value || '',
+                showRubeoleInReport: document.getElementById('show-rubeole-in-report')?.checked || false,
+
+                // Sérologie Infectieuse - Toxoplasmose
+                toxoplasmoseIggResult: document.getElementById('toxoplasmose-igg-result')?.value || '',
+                toxoplasmoseIgmResult: document.getElementById('toxoplasmose-igm-result')?.value || '',
+                toxoplasmoseComments: document.getElementById('toxoplasmose-comments')?.value || '',
+                showToxoplasmoseInReport: document.getElementById('show-toxoplasmose-in-report')?.checked || false,
+
+                // Sérologie Widal & Félix
+                widalTyphiO: document.getElementById('widal-typhi-o')?.value || '',
+                widalTyphiH: document.getElementById('widal-typhi-h')?.value || '',
+                widalParatyphiAO: document.getElementById('widal-paratyphi-ao')?.value || '',
+                widalParatyphiAH: document.getElementById('widal-paratyphi-ah')?.value || '',
+                widalParatyphiBO: document.getElementById('widal-paratyphi-bo')?.value || '',
+                widalParatyphiBH: document.getElementById('widal-paratyphi-bh')?.value || '',
+                widalParatyphiCO: document.getElementById('widal-paratyphi-co')?.value || '',
+                widalParatyphiCH: document.getElementById('widal-paratyphi-ch')?.value || '',
+                widalEnteridisH: document.getElementById('widal-enteridis-h')?.value || '',
+                widalThyphiMutriumH: document.getElementById('widal-thyphi-mutrium-h')?.value || '',
+                widalConclusion: document.getElementById('widal-conclusion')?.value || '',
+                showWidalInReport: document.getElementById('show-widal-in-report')?.checked || false,
+
+                // ECBU
+                ecbuRecueil: document.getElementById('ecbu-recueil')?.value || '',
+                ecbuAspect: document.getElementById('ecbu-aspect')?.value || '',
+                ecbuPh: document.getElementById('ecbu-ph')?.value || '',
+                ecbuLeucocytes: document.getElementById('ecbu-leucocytes')?.value || '',
+                ecbuHematies: document.getElementById('ecbu-hematies')?.value || '',
+                ecbuCellulesEpitheliales: document.getElementById('ecbu-cellules-epitheliales')?.value || '',
+                ecbuCylindres: document.getElementById('ecbu-cylindres')?.value || '',
+                ecbuCristaux: document.getElementById('ecbu-cristaux')?.value || '',
+                ecbuExamenDirect: document.getElementById('ecbu-examen-direct')?.value || '',
+                ecbuCultures: document.getElementById('ecbu-cultures')?.value || '',
+                ecbuConclusion: document.getElementById('ecbu-conclusion')?.value || '',
+                showEcbuInReport: document.getElementById('show-ecbu-in-report')?.checked || false,
+
+                // Examen Parasitologique des Selles
+                parasitoSellesAspect: document.getElementById('parasito-selles-aspect')?.value || '',
+                parasitoSellesCellules: document.getElementById('parasito-selles-cellules')?.value || '',
+                parasitoSellesLeucocytes: document.getElementById('parasito-selles-leucocytes')?.value || '',
+                parasitoSellesHematies: document.getElementById('parasito-selles-hematies')?.value || '',
+                parasitoSellesCharcot: document.getElementById('parasito-selles-charcot')?.value || '',
+                parasitoSellesMicroscopique: document.getElementById('parasito-selles-microscopique')?.value || '',
+                parasitoSellesEnrichissement: document.getElementById('parasito-selles-enrichissement')?.value || '',
+                showParasitoSellesInReport: document.getElementById('show-parasito-selles-in-report')?.checked || false,
+
+                // Coproculture
+                coprocultureAspect: document.getElementById('coproculture-aspect')?.value || '',
+                coprocultureCellules: document.getElementById('coproculture-cellules')?.value || '',
+                coprocultureLeucocytes: document.getElementById('coproculture-leucocytes')?.value || '',
+                coprocultureHematies: document.getElementById('coproculture-hematies')?.value || '',
+                coprocultureGramNegatifs: document.getElementById('coproculture-gram-negatifs')?.value || '',
+                coprocultureGramPositifs: document.getElementById('coproculture-gram-positifs')?.value || '',
+                coprocultureCultures: document.getElementById('coproculture-cultures')?.value || '',
+                showCoprocultureInReport: document.getElementById('show-coproculture-in-report')?.checked || false,
+
                 // Bilan Sanguin
                 glycemieResult: document.getElementById('glycemie-result').value,
                 glycemieAntecedent: document.getElementById('glycemie-antecedent').value,
@@ -1657,8 +2365,30 @@
                 magnesiumAntecedent: document.getElementById('magnesium-antecedent')?.value || '',
                 calciumResult: document.getElementById('calcium-result')?.value || '',
                 calciumAntecedent: document.getElementById('calcium-antecedent')?.value || '',
-                
+
+                // HbA1c et Clairance de la Créatinine
+                hba1cResult: document.getElementById('hba1c-result')?.value || '',
+                hba1cAntecedent: document.getElementById('hba1c-antecedent')?.value || '',
+                clairanceCreatinineResult: document.getElementById('clairance-creatinine-result')?.value || '',
+                clairanceCreatinineAntecedent: document.getElementById('clairance-creatinine-antecedent')?.value || '',
+
                 biochimieComments: document.getElementById('biochimie-comments').value,
+
+                // Électrophorèse des Protéines Sériques
+                albumineGlResult: document.getElementById('albumine-gl-result')?.value || '',
+                albuminePctResult: document.getElementById('albumine-pct-result')?.value || '',
+                alpha1GlResult: document.getElementById('alpha1-gl-result')?.value || '',
+                alpha1PctResult: document.getElementById('alpha1-pct-result')?.value || '',
+                alpha2GlResult: document.getElementById('alpha2-gl-result')?.value || '',
+                alpha2PctResult: document.getElementById('alpha2-pct-result')?.value || '',
+                betaGlResult: document.getElementById('beta-gl-result')?.value || '',
+                betaPctResult: document.getElementById('beta-pct-result')?.value || '',
+                gammaGlResult: document.getElementById('gamma-gl-result')?.value || '',
+                gammaPctResult: document.getElementById('gamma-pct-result')?.value || '',
+                proteinesTotalesResult: document.getElementById('proteines-totales-result')?.value || '',
+                rapportAgResult: document.getElementById('rapport-ag-result')?.value || '',
+                electrophoreseComments: document.getElementById('electrophorese-comments')?.value || '',
+                showElectrophoreseInReport: document.getElementById('show-electrophorese-in-report')?.checked || false,
 
                 // Valeurs absolues (Formule Leucocytaire)
                 pnnAbsolue: document.getElementById('pnn-absolue')?.value || '',
@@ -1689,7 +2419,19 @@
             console.log('dateExport (pour identification):', formData.dateExport);
             console.log('patientNom:', formData.patientNom);
             console.log('patientPrenom:', formData.patientPrenom);
-            
+
+            // Debug électrophorèse
+            console.log('=== ELECTROPHORESE DATA ===');
+            console.log('albumineGlResult:', formData.albumineGlResult);
+            console.log('albuminePctResult:', formData.albuminePctResult);
+            console.log('alpha1GlResult:', formData.alpha1GlResult);
+            console.log('alpha2GlResult:', formData.alpha2GlResult);
+            console.log('betaGlResult:', formData.betaGlResult);
+            console.log('gammaGlResult:', formData.gammaGlResult);
+            console.log('proteinesTotalesResult:', formData.proteinesTotalesResult);
+            console.log('rapportAgResult:', formData.rapportAgResult);
+            console.log('showElectrophoreseInReport:', formData.showElectrophoreseInReport);
+
             return formData;
         }
 
@@ -1842,6 +2584,79 @@
                 if (formData.hivResult) document.getElementById('hiv-result').value = formData.hivResult;
                 if (formData.hivComments) document.getElementById('hiv-comments').value = formData.hivComments;
 
+                // Sérologie Infectieuse - Hépatite B
+                if (formData.hepatiteBResult) document.getElementById('hepatite-b-result').value = formData.hepatiteBResult;
+                if (formData.hepatiteBComments) document.getElementById('hepatite-b-comments').value = formData.hepatiteBComments;
+                if (formData.showHepatiteBInReport !== undefined) document.getElementById('show-hepatite-b-in-report').checked = formData.showHepatiteBInReport;
+
+                // Sérologie Infectieuse - Hépatite C
+                if (formData.hepatiteCResult) document.getElementById('hepatite-c-result').value = formData.hepatiteCResult;
+                if (formData.hepatiteCComments) document.getElementById('hepatite-c-comments').value = formData.hepatiteCComments;
+                if (formData.showHepatiteCInReport !== undefined) document.getElementById('show-hepatite-c-in-report').checked = formData.showHepatiteCInReport;
+
+                // Sérologie Infectieuse - Rubéole
+                if (formData.rubeoleIggResult) document.getElementById('rubeole-igg-result').value = formData.rubeoleIggResult;
+                if (formData.rubeoleIgmResult) document.getElementById('rubeole-igm-result').value = formData.rubeoleIgmResult;
+                if (formData.rubeoleComments) document.getElementById('rubeole-comments').value = formData.rubeoleComments;
+                if (formData.showRubeoleInReport !== undefined) document.getElementById('show-rubeole-in-report').checked = formData.showRubeoleInReport;
+
+                // Sérologie Infectieuse - Toxoplasmose
+                if (formData.toxoplasmoseIggResult) document.getElementById('toxoplasmose-igg-result').value = formData.toxoplasmoseIggResult;
+                if (formData.toxoplasmoseIgmResult) document.getElementById('toxoplasmose-igm-result').value = formData.toxoplasmoseIgmResult;
+                if (formData.toxoplasmoseComments) document.getElementById('toxoplasmose-comments').value = formData.toxoplasmoseComments;
+                if (formData.showToxoplasmoseInReport !== undefined) document.getElementById('show-toxoplasmose-in-report').checked = formData.showToxoplasmoseInReport;
+
+                // Sérologie Widal & Félix
+                const widalFields = ['widal-typhi-o', 'widal-typhi-h', 'widal-paratyphi-ao', 'widal-paratyphi-ah',
+                    'widal-paratyphi-bo', 'widal-paratyphi-bh', 'widal-paratyphi-co', 'widal-paratyphi-ch',
+                    'widal-enteridis-h', 'widal-thyphi-mutrium-h'];
+                const widalDataKeys = ['widalTyphiO', 'widalTyphiH', 'widalParatyphiAO', 'widalParatyphiAH',
+                    'widalParatyphiBO', 'widalParatyphiBH', 'widalParatyphiCO', 'widalParatyphiCH',
+                    'widalEnteridisH', 'widalThyphiMutriumH'];
+                widalFields.forEach((fieldId, i) => {
+                    const el = document.getElementById(fieldId);
+                    if (el && formData[widalDataKeys[i]]) el.value = formData[widalDataKeys[i]];
+                });
+                if (formData.widalConclusion) document.getElementById('widal-conclusion').value = formData.widalConclusion;
+                if (formData.showWidalInReport !== undefined) document.getElementById('show-widal-in-report').checked = formData.showWidalInReport;
+
+                // ECBU
+                const ecbuFields = ['ecbu-recueil', 'ecbu-aspect', 'ecbu-ph', 'ecbu-leucocytes', 'ecbu-hematies',
+                    'ecbu-cellules-epitheliales', 'ecbu-cylindres', 'ecbu-cristaux', 'ecbu-examen-direct', 'ecbu-cultures'];
+                const ecbuKeys = ['ecbuRecueil', 'ecbuAspect', 'ecbuPh', 'ecbuLeucocytes', 'ecbuHematies',
+                    'ecbuCellulesEpitheliales', 'ecbuCylindres', 'ecbuCristaux', 'ecbuExamenDirect', 'ecbuCultures'];
+                ecbuFields.forEach((fieldId, i) => {
+                    const el = document.getElementById(fieldId);
+                    if (el && formData[ecbuKeys[i]]) el.value = formData[ecbuKeys[i]];
+                });
+                if (formData.ecbuConclusion) document.getElementById('ecbu-conclusion').value = formData.ecbuConclusion;
+                if (formData.showEcbuInReport !== undefined) document.getElementById('show-ecbu-in-report').checked = formData.showEcbuInReport;
+
+                // Examen Parasitologique des Selles
+                const parasitoFields = ['parasito-selles-aspect', 'parasito-selles-cellules', 'parasito-selles-leucocytes',
+                    'parasito-selles-hematies', 'parasito-selles-charcot'];
+                const parasitoKeys = ['parasitoSellesAspect', 'parasitoSellesCellules', 'parasitoSellesLeucocytes',
+                    'parasitoSellesHematies', 'parasitoSellesCharcot'];
+                parasitoFields.forEach((fieldId, i) => {
+                    const el = document.getElementById(fieldId);
+                    if (el && formData[parasitoKeys[i]]) el.value = formData[parasitoKeys[i]];
+                });
+                if (formData.parasitoSellesMicroscopique) document.getElementById('parasito-selles-microscopique').value = formData.parasitoSellesMicroscopique;
+                if (formData.parasitoSellesEnrichissement) document.getElementById('parasito-selles-enrichissement').value = formData.parasitoSellesEnrichissement;
+                if (formData.showParasitoSellesInReport !== undefined) document.getElementById('show-parasito-selles-in-report').checked = formData.showParasitoSellesInReport;
+
+                // Coproculture
+                const coproFields = ['coproculture-aspect', 'coproculture-cellules', 'coproculture-leucocytes',
+                    'coproculture-hematies', 'coproculture-gram-negatifs', 'coproculture-gram-positifs'];
+                const coproKeys = ['coprocultureAspect', 'coprocultureCellules', 'coprocultureLeucocytes',
+                    'coprocultureHematies', 'coprocultureGramNegatifs', 'coprocultureGramPositifs'];
+                coproFields.forEach((fieldId, i) => {
+                    const el = document.getElementById(fieldId);
+                    if (el && formData[coproKeys[i]]) el.value = formData[coproKeys[i]];
+                });
+                if (formData.coprocultureCultures) document.getElementById('coproculture-cultures').value = formData.coprocultureCultures;
+                if (formData.showCoprocultureInReport !== undefined) document.getElementById('show-coproculture-in-report').checked = formData.showCoprocultureInReport;
+
                 // Bilan Sanguin
                 if (formData.glycemieResult) document.getElementById('glycemie-result').value = formData.glycemieResult;
                 if (formData.glycemieAntecedent) document.getElementById('glycemie-antecedent').value = formData.glycemieAntecedent;
@@ -1871,7 +2686,30 @@
                 if (formData.magnesiumAntecedent) document.getElementById('magnesium-antecedent').value = formData.magnesiumAntecedent;
                 if (formData.calciumResult) document.getElementById('calcium-result').value = formData.calciumResult;
                 if (formData.calciumAntecedent) document.getElementById('calcium-antecedent').value = formData.calciumAntecedent;
+
+                // HbA1c et Clairance de la Créatinine
+                if (formData.hba1cResult) document.getElementById('hba1c-result').value = formData.hba1cResult;
+                if (formData.hba1cAntecedent) document.getElementById('hba1c-antecedent').value = formData.hba1cAntecedent;
+                if (formData.clairanceCreatinineResult) document.getElementById('clairance-creatinine-result').value = formData.clairanceCreatinineResult;
+                if (formData.clairanceCreatinineAntecedent) document.getElementById('clairance-creatinine-antecedent').value = formData.clairanceCreatinineAntecedent;
+
                 if (formData.biochimieComments) document.getElementById('biochimie-comments').value = formData.biochimieComments;
+
+                // Électrophorèse des Protéines Sériques
+                if (formData.albumineGlResult) document.getElementById('albumine-gl-result').value = formData.albumineGlResult;
+                if (formData.albuminePctResult) document.getElementById('albumine-pct-result').value = formData.albuminePctResult;
+                if (formData.alpha1GlResult) document.getElementById('alpha1-gl-result').value = formData.alpha1GlResult;
+                if (formData.alpha1PctResult) document.getElementById('alpha1-pct-result').value = formData.alpha1PctResult;
+                if (formData.alpha2GlResult) document.getElementById('alpha2-gl-result').value = formData.alpha2GlResult;
+                if (formData.alpha2PctResult) document.getElementById('alpha2-pct-result').value = formData.alpha2PctResult;
+                if (formData.betaGlResult) document.getElementById('beta-gl-result').value = formData.betaGlResult;
+                if (formData.betaPctResult) document.getElementById('beta-pct-result').value = formData.betaPctResult;
+                if (formData.gammaGlResult) document.getElementById('gamma-gl-result').value = formData.gammaGlResult;
+                if (formData.gammaPctResult) document.getElementById('gamma-pct-result').value = formData.gammaPctResult;
+                if (formData.proteinesTotalesResult) document.getElementById('proteines-totales-result').value = formData.proteinesTotalesResult;
+                if (formData.rapportAgResult) document.getElementById('rapport-ag-result').value = formData.rapportAgResult;
+                if (formData.electrophoreseComments) document.getElementById('electrophorese-comments').value = formData.electrophoreseComments;
+                if (formData.showElectrophoreseInReport !== undefined) document.getElementById('show-electrophorese-in-report').checked = formData.showElectrophoreseInReport;
 
                 console.log('Formulaire rempli avec les données sauvegardées');
             } catch (error) {

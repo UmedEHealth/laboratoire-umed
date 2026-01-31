@@ -917,8 +917,122 @@
                                 <td style="padding: 8px; border: 1px solid #ddd; text-align: center;"
                                     id="hiv-comments-cell">-</td>
                             </tr>
+                            <tr id="hepatite-b-row" style="display: none;">
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Hépatite B (Anti-HBs)</strong><br><small
+                                        style="color: #666; font-style: italic;">Anticorps anti-HBs</small>
+                                </td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;"
+                                    id="hepatite-b-result-cell">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;"
+                                    id="hepatite-b-comments-cell">-</td>
+                            </tr>
+                            <tr id="hepatite-c-row" style="display: none;">
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Hépatite C (Anti-HCV)</strong><br><small
+                                        style="color: #666; font-style: italic;">Anticorps anti-VHC</small>
+                                </td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;"
+                                    id="hepatite-c-result-cell">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;"
+                                    id="hepatite-c-comments-cell">-</td>
+                            </tr>
+                            <tr id="rubeole-igg-row" style="display: none;">
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Rubéole - IgG</strong><br><small
+                                        style="color: #666; font-style: italic;">Immunoglobulines G</small>
+                                </td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;"
+                                    id="rubeole-igg-result-cell">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;"
+                                    id="rubeole-comments-cell" rowspan="2">-</td>
+                            </tr>
+                            <tr id="rubeole-igm-row" style="display: none;">
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Rubéole - IgM</strong><br><small
+                                        style="color: #666; font-style: italic;">Immunoglobulines M</small>
+                                </td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;"
+                                    id="rubeole-igm-result-cell">-</td>
+                            </tr>
+                            <tr id="toxoplasmose-igg-row" style="display: none;">
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Toxoplasmose - IgG</strong><br><small
+                                        style="color: #666; font-style: italic;">Immunoglobulines G</small>
+                                </td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;"
+                                    id="toxoplasmose-igg-result-cell">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;"
+                                    id="toxoplasmose-comments-cell" rowspan="2">-</td>
+                            </tr>
+                            <tr id="toxoplasmose-igm-row" style="display: none;">
+                                <td style="padding: 8px; border: 1px solid #ddd;"><strong>Toxoplasmose - IgM</strong><br><small
+                                        style="color: #666; font-style: italic;">Immunoglobulines M</small>
+                                </td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;"
+                                    id="toxoplasmose-igm-result-cell">-</td>
+                            </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- Sérologie Widal & Félix -->
+            <div id="widal-felix-section" style="display: none;">
+                <div class="section-header">SÉROLOGIE INFECTIEUSE</div>
+                <p style="font-size: 12px; font-weight: bold; margin: 10px 0;">SÉROLOGIE WIDAL & FÉLIX</p>
+
+                <div class="simple-section">
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left; font-weight: bold;">Antigène</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;">Résultat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="widal-typhi-o-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Typhi O</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-typhi-o-result">-</td>
+                            </tr>
+                            <tr id="widal-typhi-h-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Typhi H</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-typhi-h-result">-</td>
+                            </tr>
+                            <tr id="widal-paratyphi-ao-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Paratyphi AO</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-paratyphi-ao-result">-</td>
+                            </tr>
+                            <tr id="widal-paratyphi-ah-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Paratyphi AH</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-paratyphi-ah-result">-</td>
+                            </tr>
+                            <tr id="widal-paratyphi-bo-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Paratyphi BO</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-paratyphi-bo-result">-</td>
+                            </tr>
+                            <tr id="widal-paratyphi-bh-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Paratyphi BH</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-paratyphi-bh-result">-</td>
+                            </tr>
+                            <tr id="widal-paratyphi-co-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Paratyphi CO</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-paratyphi-co-result">-</td>
+                            </tr>
+                            <tr id="widal-paratyphi-ch-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Paratyphi CH</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-paratyphi-ch-result">-</td>
+                            </tr>
+                            <tr id="widal-enteridis-h-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Enteridis H</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-enteridis-h-result">-</td>
+                            </tr>
+                            <tr id="widal-thyphi-mutrium-h-row">
+                                <td style="padding: 8px; border: 1px solid #ddd;">Salmonella Thyphi Mutrium H</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="widal-thyphi-mutrium-h-result">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 15px;">
+                        <p style="font-size: 11px;"><strong>Conclusion :</strong></p>
+                        <p style="font-size: 10px; margin-left: 10px;" id="widal-felix-conclusion">-</p>
+                    </div>
                 </div>
             </div>
 
@@ -1312,7 +1426,7 @@
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="hdl-value">-
                                 </td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">g/L</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(&gt;0.60)</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(H&gt;0.40, F&gt;0.50; ≥0.60 prot.)</td>
                             </tr>
                             <tr id="ldl-row">
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>LDL Cholestérol</strong></td>
@@ -1346,7 +1460,7 @@
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>Potassium (K+)</strong></td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="potassium-value">-</td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mmol/L</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(3.4-4.5)</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(3.5-5.0)</td>
                             </tr>
                             <tr id="chlore-row">
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>Chlore (Cl-)</strong></td>
@@ -1357,12 +1471,24 @@
                             <tr id="magnesium-row">
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>Magnésium (Mg²⁺)</strong></td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="magnesium-value">-</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mg/L</td><td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(18-25)</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mg/L</td><td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(17-24)</td>
                             </tr>
                             <tr id="calcium-row">
                                 <td style="padding: 5px; border: 1px solid #ddd;"><strong>Calcium (Ca²⁺)</strong></td>
                                 <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="calcium-value">-</td>
-                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mg/L</td><td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(84-104)</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mg/L</td><td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(88-105)</td>
+                            </tr>
+                            <tr id="hba1c-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>HbA1c (Hémoglobine Glyquée)</strong></td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="hba1c-value">-</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">%</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(&lt;5.7% N; ≥6.5% diab; &lt;7% ctrl)</td>
+                            </tr>
+                            <tr id="clairance-creatinine-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Clairance de la Créatinine (Cockroft)</strong></td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;" id="clairance-creatinine-value">-</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">mL/min</td>
+                                <td style="padding: 5px; border: 1px solid #ddd; text-align: center;">(90-120; &lt;60=IR)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1370,6 +1496,88 @@
                     <div style="margin-top: 15px;">
                         <p style="font-size: 11px;"><strong>Commentaires Biochimie :</strong> <span
                                 id="biochimie-comments">-</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Électrophorèse des Protéines Sériques -->
+            <div id="electrophorese-section" style="display: none;">
+                <div class="section-header">ÉLECTROPHORÈSE DES PROTÉINES SÉRIQUES</div>
+                <p style="font-size: 10px; margin: 5px 0;">Nature de l'échantillon : <span
+                        id="nature-echantillon-electrophorese">-</span> - Électrophorèse capillaire</p>
+
+                <div class="simple-section">
+                    <table
+                        style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Fraction</th>
+                                <th class="col-gl" style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat (g/L)</th>
+                                <th class="col-pct" style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat (%)</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Valeurs de référence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="albumine-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Albumine</strong></td>
+                                <td class="col-gl" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="albumine-gl-value">-</td>
+                                <td class="col-pct" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="albumine-pct-value">-</td>
+                                <td class="col-ref" id="albumine-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(35-50 g/L ou 55-65%)</td>
+                            </tr>
+                            <tr id="alpha1-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Alpha-1 Globulines</strong></td>
+                                <td class="col-gl" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="alpha1-gl-value">-</td>
+                                <td class="col-pct" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="alpha1-pct-value">-</td>
+                                <td class="col-ref" id="alpha1-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(1-4 g/L ou 2-5%)</td>
+                            </tr>
+                            <tr id="alpha2-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Alpha-2 Globulines</strong></td>
+                                <td class="col-gl" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="alpha2-gl-value">-</td>
+                                <td class="col-pct" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="alpha2-pct-value">-</td>
+                                <td class="col-ref" id="alpha2-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(4-8 g/L ou 7-13%)</td>
+                            </tr>
+                            <tr id="beta-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Bêta Globulines</strong></td>
+                                <td class="col-gl" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="beta-gl-value">-</td>
+                                <td class="col-pct" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="beta-pct-value">-</td>
+                                <td class="col-ref" id="beta-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(5-10 g/L ou 8-14%)</td>
+                            </tr>
+                            <tr id="gamma-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Gamma Globulines</strong></td>
+                                <td class="col-gl" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="gamma-gl-value">-</td>
+                                <td class="col-pct" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="gamma-pct-value">-</td>
+                                <td class="col-ref" id="gamma-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(6-16 g/L ou 10-20%)</td>
+                            </tr>
+                            <tr id="proteines-totales-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Protéines Totales</strong></td>
+                                <td class="col-gl col-combined" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="proteines-totales-value">-</td>
+                                <td class="col-pct col-combined-hidden" style="padding: 5px; border: 1px solid #ddd; text-align: center; display: none;"></td>
+                                <td class="col-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(60-80 g/L)</td>
+                            </tr>
+                            <tr id="rapport-ag-row">
+                                <td style="padding: 5px; border: 1px solid #ddd;"><strong>Rapport Albumine/Globulines</strong></td>
+                                <td class="col-gl col-combined" style="padding: 5px; border: 1px solid #ddd; text-align: center;"
+                                    id="rapport-ag-value">-</td>
+                                <td class="col-pct col-combined-hidden" style="padding: 5px; border: 1px solid #ddd; text-align: center; display: none;"></td>
+                                <td class="col-ref" style="padding: 5px; border: 1px solid #ddd; text-align: center;">(1.0-2.2)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 15px;">
+                        <p style="font-size: 11px;"><strong>Interprétation :</strong> <span
+                                id="electrophorese-comments-display">-</span></p>
                     </div>
                 </div>
             </div>
@@ -1447,6 +1655,231 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <!-- ECBU -->
+            <div id="ecbu-section" style="display: none;">
+                <div class="section-header">BACTÉRIOLOGIE</div>
+                <p style="font-size: 12px; font-weight: bold; margin: 10px 0;">EXAMEN CYTOBACTÉRIOLOGIQUE DES URINES (ECBU)</p>
+
+                <div class="simple-section">
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Recueil :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="ecbu-recueil-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Aspect :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="ecbu-aspect-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Recherche biochimique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Paramètre</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Valeurs de référence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">pH</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-ph-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(7 - 8)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Examen cytologique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Paramètre</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Valeurs de référence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Leucocytes</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-leucocytes-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(0 - 10 /mm3)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Hématies</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-hematies-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(&lt;1 /mm3)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cellules épithéliales</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-cellules-epitheliales-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(Absence)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cylindres</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-cylindres-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(Absence)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cristaux</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-cristaux-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(Absence)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Examen direct</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="ecbu-examen-direct-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(Absence de germes)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Examen bactériologique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Cultures :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="ecbu-cultures-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 15px;">
+                        <p style="font-size: 11px;"><strong>Conclusion :</strong></p>
+                        <p style="font-size: 10px; margin-left: 10px;" id="ecbu-conclusion-value">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Examen Parasitologique des Selles -->
+            <div id="parasito-selles-section" style="display: none;">
+                <div class="section-header">PARASITOLOGIE-MYCOLOGIE</div>
+                <p style="font-size: 12px; font-weight: bold; margin: 10px 0;">EXAMEN PARASITOLOGIQUE DES SELLES</p>
+
+                <div class="simple-section">
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Aspect :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="parasito-selles-aspect-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Examen cytologique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Paramètre</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cellules épithéliales</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="parasito-selles-cellules-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Leucocytes</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="parasito-selles-leucocytes-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Hématies</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="parasito-selles-hematies-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cristaux de Charcot-Leyden</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="parasito-selles-charcot-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Examen parasitologique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Examen microscopique :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="parasito-selles-microscopique-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Après enrichissement :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="parasito-selles-enrichissement-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Coproculture -->
+            <div id="coproculture-section" style="display: none;">
+                <div class="section-header">BACTÉRIOLOGIE</div>
+                <p style="font-size: 12px; font-weight: bold; margin: 10px 0;">COPROCULTURE</p>
+
+                <div class="simple-section">
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Aspect :</td>
+                                <td style="padding: 8px; border: 1px solid #ddd;" id="coproculture-aspect-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Examen cytologique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Paramètre</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Cellules épithéliales</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="coproculture-cellules-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Leucocytes</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="coproculture-leucocytes-value">-</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Hématies</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center;" id="coproculture-hematies-value">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size: 11px; font-weight: bold; margin: 10px 0;">Examen bactériologique</p>
+                    <table style="width: 100%; font-size: 11px; border-collapse: collapse; margin: 10px 0; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: left;">Paramètre</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Résultat</th>
+                                <th style="padding: 8px; border: 1px solid #ddd; text-align: center;">Valeurs de référence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Flore Gram Négatifs</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="coproculture-gram-negatifs-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(&gt;60 %)</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px; border: 1px solid #ddd;">Flore Gram Positifs</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-weight: bold;" id="coproculture-gram-positifs-value">-</td>
+                                <td style="padding: 8px; border: 1px solid #ddd; text-align: center; font-style: italic;">(&gt;35 %)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div style="margin-top: 10px;">
+                        <p style="font-size: 11px;"><strong>Cultures :</strong></p>
+                        <p style="font-size: 10px; margin-left: 10px;" id="coproculture-cultures-value">-</p>
+                    </div>
                 </div>
             </div>
 
@@ -1651,9 +2084,12 @@
             function colorerValeurAnormale(elementId, valeur, min, max) {
                 const element = document.getElementById(elementId);
                 if (element) {
-                    element.textContent = valeur;
+                    // Ne pas écraser le contenu si la valeur est vide (préserve le '-' déjà défini)
+                    if (valeur !== '' && valeur !== '-') {
+                        element.textContent = valeur;
+                    }
                     element.style.fontWeight = 'bold';
-                    
+
                     // Valider seulement si la valeur n'est pas vide ou "-"
                     if (valeur !== '-' && valeur !== '') {
                         const numValue = parseFloat(valeur.toString().replace(',', '.'));
@@ -1837,24 +2273,14 @@
             }
 
             // Masquer la section dengue dans le rapport si l'option est désactivée
+            // NOTE: On cible UNIQUEMENT la section parasitologie pour ne pas masquer la sérologie arboviroses
             if (!formData.showDengueInReport) {
-                // Masquer les lignes de la dengue dans la table
-                const dengueRows = document.querySelectorAll('tr[id^="dengue-"]');
-                dengueRows.forEach(row => {
-                    row.style.display = 'none';
-                });
-                
-                // Masquer aussi les éléments de sérologie dengue
-                document.querySelectorAll('[id^="dengue-"]').forEach(el => {
-                    if (el.closest('table')) {
-                        el.closest('tr').style.display = 'none';
-                    }
-                });
-                
-                // Masquer la conclusion
-                const conclusionElement = document.getElementById('serologie-dengue-conclusion');
-                if (conclusionElement && conclusionElement.closest('div')) {
-                    conclusionElement.closest('div').style.display = 'none';
+                // Masquer les lignes dengue UNIQUEMENT dans la section parasitologie
+                if (paluSection) {
+                    const dengueRows = paluSection.querySelectorAll('tr[id^="dengue-"]');
+                    dengueRows.forEach(row => {
+                        row.style.display = 'none';
+                    });
                 }
             }
 
@@ -1875,15 +2301,18 @@
                 immunoSection.style.display = 'none';
             }
 
-            // Sérologie Infectieuse - HIV
+            // Sérologie Infectieuse
             const serologieSection = document.getElementById('serologie-section');
+            let hasSerologieData = false;
+
+            // HIV
             if (formData.hivResult && formData.hivResult !== '' && formData.showHivInReport) {
                 const hivResultCell = document.getElementById('hiv-result-cell');
                 hivResultCell.textContent = formData.hivResult;
                 document.getElementById('hiv-comments-cell').textContent = formData.hivComments || '-';
-                serologieSection.style.display = 'block';
-                
-                // Highlight critical positive results in red
+                document.getElementById('hiv-row').style.display = '';
+                hasSerologieData = true;
+
                 if (formData.hivResult.toLowerCase() === 'positif') {
                     hivResultCell.classList.add('critical-positive');
                     hivResultCell.classList.remove('result-negative');
@@ -1891,6 +2320,95 @@
                     hivResultCell.classList.add('result-negative');
                     hivResultCell.classList.remove('critical-positive');
                 }
+            } else {
+                document.getElementById('hiv-row').style.display = 'none';
+            }
+
+            // Hépatite B
+            if (formData.hepatiteBResult && formData.hepatiteBResult !== '' && formData.showHepatiteBInReport) {
+                const hepatiteBResultCell = document.getElementById('hepatite-b-result-cell');
+                hepatiteBResultCell.textContent = formData.hepatiteBResult;
+                document.getElementById('hepatite-b-comments-cell').textContent = formData.hepatiteBComments || '-';
+                document.getElementById('hepatite-b-row').style.display = '';
+                hasSerologieData = true;
+
+                if (formData.hepatiteBResult.toLowerCase() === 'positif') {
+                    hepatiteBResultCell.classList.add('result-negative'); // Positif = immunisé = vert
+                    hepatiteBResultCell.classList.remove('critical-positive');
+                } else if (formData.hepatiteBResult.toLowerCase() === 'negatif') {
+                    hepatiteBResultCell.classList.remove('result-negative');
+                    hepatiteBResultCell.classList.remove('critical-positive');
+                }
+            }
+
+            // Hépatite C
+            if (formData.hepatiteCResult && formData.hepatiteCResult !== '' && formData.showHepatiteCInReport) {
+                const hepatiteCResultCell = document.getElementById('hepatite-c-result-cell');
+                hepatiteCResultCell.textContent = formData.hepatiteCResult;
+                document.getElementById('hepatite-c-comments-cell').textContent = formData.hepatiteCComments || '-';
+                document.getElementById('hepatite-c-row').style.display = '';
+                hasSerologieData = true;
+
+                if (formData.hepatiteCResult.toLowerCase() === 'positif') {
+                    hepatiteCResultCell.classList.add('critical-positive');
+                    hepatiteCResultCell.classList.remove('result-negative');
+                } else if (formData.hepatiteCResult.toLowerCase() === 'negatif') {
+                    hepatiteCResultCell.classList.add('result-negative');
+                    hepatiteCResultCell.classList.remove('critical-positive');
+                }
+            }
+
+            // Rubéole
+            if (formData.showRubeoleInReport && (formData.rubeoleIggResult || formData.rubeoleIgmResult)) {
+                hasSerologieData = true;
+                if (formData.rubeoleIggResult) {
+                    const rubeoleIggResultCell = document.getElementById('rubeole-igg-result-cell');
+                    rubeoleIggResultCell.textContent = formData.rubeoleIggResult;
+                    document.getElementById('rubeole-igg-row').style.display = '';
+
+                    if (formData.rubeoleIggResult.toLowerCase() === 'positif') {
+                        rubeoleIggResultCell.classList.add('critical-positive');
+                    }
+                }
+                if (formData.rubeoleIgmResult) {
+                    const rubeoleIgmResultCell = document.getElementById('rubeole-igm-result-cell');
+                    rubeoleIgmResultCell.textContent = formData.rubeoleIgmResult;
+                    document.getElementById('rubeole-igm-row').style.display = '';
+
+                    if (formData.rubeoleIgmResult.toLowerCase() === 'positif') {
+                        rubeoleIgmResultCell.classList.add('critical-positive'); // IgM+ = infection récente
+                    }
+                }
+                document.getElementById('rubeole-comments-cell').textContent = formData.rubeoleComments || '-';
+            }
+
+            // Toxoplasmose
+            if (formData.showToxoplasmoseInReport && (formData.toxoplasmoseIggResult || formData.toxoplasmoseIgmResult)) {
+                hasSerologieData = true;
+                if (formData.toxoplasmoseIggResult) {
+                    const toxoplasmoseIggResultCell = document.getElementById('toxoplasmose-igg-result-cell');
+                    toxoplasmoseIggResultCell.textContent = formData.toxoplasmoseIggResult;
+                    document.getElementById('toxoplasmose-igg-row').style.display = '';
+
+                    if (formData.toxoplasmoseIggResult.toLowerCase() === 'positif') {
+                        toxoplasmoseIggResultCell.classList.add('critical-positive');
+                    }
+                }
+                if (formData.toxoplasmoseIgmResult) {
+                    const toxoplasmoseIgmResultCell = document.getElementById('toxoplasmose-igm-result-cell');
+                    toxoplasmoseIgmResultCell.textContent = formData.toxoplasmoseIgmResult;
+                    document.getElementById('toxoplasmose-igm-row').style.display = '';
+
+                    if (formData.toxoplasmoseIgmResult.toLowerCase() === 'positif') {
+                        toxoplasmoseIgmResultCell.classList.add('critical-positive'); // IgM+ = infection récente
+                    }
+                }
+                document.getElementById('toxoplasmose-comments-cell').textContent = formData.toxoplasmoseComments || '-';
+            }
+
+            // Afficher/masquer la section sérologie
+            if (hasSerologieData) {
+                serologieSection.style.display = 'block';
             } else {
                 serologieSection.style.display = 'none';
             }
@@ -1947,17 +2465,21 @@
             colorerValeurAnormale('ggt-value', formData.ggtResult || '', 0, 55);
             colorerValeurAnormale('cholesterol-value', formData.cholesterolResult || '', 0, 2.0);
             colorerValeurAnormale('triglycerides-value', formData.triglyceridesResult || '', 0.4, 1.7);
-            colorerValeurAnormale('hdl-value', formData.hdlResult || '', 0.6, 999);
+            colorerValeurAnormale('hdl-value', formData.hdlResult || '', 0.4, 999);
             colorerValeurAnormale('ldl-value', formData.ldlResult || '', 0, 1.0);
             colorerValeurAnormale('acide-urique-value', formData.acideUriqueResult || '', 25, 70);
             colorerValeurAnormale('crp-value', formData.crpResult || '', 0, 5);
-            
+
             // Électrolytes
             colorerValeurAnormale('sodium-value', formData.sodiumResult || '', 136, 145);
-            colorerValeurAnormale('potassium-value', formData.potassiumResult || '', 3.4, 4.5);
+            colorerValeurAnormale('potassium-value', formData.potassiumResult || '', 3.5, 5.0);
             colorerValeurAnormale('chlore-value', formData.chloreResult || '', 98, 107);
-            colorerValeurAnormale('magnesium-value', formData.magnesiumResult || '', 18, 25);
-            colorerValeurAnormale('calcium-value', formData.calciumResult || '', 84, 104);
+            colorerValeurAnormale('magnesium-value', formData.magnesiumResult || '', 17, 24);
+            colorerValeurAnormale('calcium-value', formData.calciumResult || '', 88, 105);
+
+            // HbA1c et Clairance de la Créatinine
+            colorerValeurAnormale('hba1c-value', formData.hba1cResult || '', 4.0, 5.7);
+            colorerValeurAnormale('clairance-creatinine-value', formData.clairanceCreatinineResult || '', 90, 120);
 
             // Vérifier si au moins une valeur biochimie est renseignée (incluant électrolytes)
             const biochimieSection = document.getElementById('biochimie-section');
@@ -1966,22 +2488,57 @@
                 formData.cholesterolResult || formData.triglyceridesResult || formData.hdlResult ||
                 formData.ldlResult || formData.acideUriqueResult || formData.crpResult ||
                 formData.sodiumResult || formData.potassiumResult || formData.chloreResult ||
-                formData.magnesiumResult || formData.calciumResult;
+                formData.magnesiumResult || formData.calciumResult ||
+                formData.hba1cResult || formData.clairanceCreatinineResult;
 
             if (hasBiochimieData) {
                 biochimieSection.style.display = 'block';
             } else {
                 biochimieSection.style.display = 'none';
             }
-            
-            // Remplir les nouvelles sections
-            updateGoutteEpaisse(formData);
-            updateSerologieArboviroses(formData);
-            updateExamensSpecialises(formData);
-            
+
+            // Électrophorèse des Protéines Sériques
+            try { updateElectrophorese(formData); } catch(e) { console.error('Erreur updateElectrophorese:', e); }
+
+            // Remplir les nouvelles sections (chaque appel dans try/catch pour éviter qu'une erreur bloque les suivantes)
+            try { updateGoutteEpaisse(formData); } catch(e) { console.error('Erreur updateGoutteEpaisse:', e); }
+            try { updateSerologieArboviroses(formData); } catch(e) { console.error('Erreur updateSerologieArboviroses:', e); }
+            try { updateExamensSpecialises(formData); } catch(e) { console.error('Erreur updateExamensSpecialises:', e); }
+            try { updateWidalFelix(formData); } catch(e) { console.error('Erreur updateWidalFelix:', e); }
+            try { updateEcbu(formData); } catch(e) { console.error('Erreur updateEcbu:', e); }
+            try { updateParasitoSelles(formData); } catch(e) { console.error('Erreur updateParasitoSelles:', e); }
+            try { updateCoproculture(formData); } catch(e) { console.error('Erreur updateCoproculture:', e); }
+
             // Masquer les lignes vides APRÈS avoir rempli toutes les données
             // Augmenter le délai pour s'assurer que tous les calculs sont terminés
             setTimeout(() => { masquerLignesVides(); }, 100); window.addEventListener('load', () => { setTimeout(masquerLignesVides, 200); });
+        }
+
+        // Fonction utilitaire pour masquer les sous-tables et titres vides dans une section
+        function masquerSousTablesVides(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
+            const tables = section.querySelectorAll('table');
+            tables.forEach(table => {
+                const tbody = table.querySelector('tbody');
+                if (!tbody) return;
+                const dataRows = tbody.querySelectorAll('tr');
+                const hasVisibleRow = Array.from(dataRows).some(row => row.style.display !== 'none');
+                if (!hasVisibleRow) {
+                    table.style.display = 'none';
+                    // Also hide the preceding header <p> if it exists
+                    let prev = table.previousElementSibling;
+                    if (prev && prev.tagName === 'P') {
+                        prev.style.display = 'none';
+                    }
+                } else {
+                    table.style.display = '';
+                    let prev = table.previousElementSibling;
+                    if (prev && prev.tagName === 'P') {
+                        prev.style.display = '';
+                    }
+                }
+            });
         }
 
         // Fonction pour remplir la section Goutte Épaisse
@@ -2033,15 +2590,24 @@
                     element.classList.add('result-negative');
                     element.classList.remove('critical-positive');
                 }
+
+                // Hide empty rows
+                const row = element.closest('tr');
+                if (row) {
+                    row.style.display = (resultValue && resultValue !== '') ? '' : 'none';
+                }
             }
-            
+
             // Remplir les champs avec highlighting
             applyDengueHighlight('dengue-igg-result', formData.dengueIggResult);
             applyDengueHighlight('dengue-igm-result', formData.dengueIgmResult);
             applyDengueHighlight('dengue-antigene-result', formData.dengueAntigeneResult);
-            
-            document.getElementById('serologie-dengue-conclusion').textContent = 
-                formData.serologieDengueConclusion || '';
+
+            const dengueConclusionEl = document.getElementById('serologie-dengue-conclusion');
+            dengueConclusionEl.textContent = formData.serologieDengueConclusion || '';
+            if (dengueConclusionEl.parentElement) {
+                dengueConclusionEl.parentElement.style.display = formData.serologieDengueConclusion ? '' : 'none';
+            }
             
             // Afficher la section si des données sont présentes
             if (formData.dengueIggResult || formData.dengueIgmResult || formData.dengueAntigeneResult || formData.serologieDengueConclusion) {
@@ -2054,16 +2620,430 @@
         // Fonction pour remplir la section Examens Spécialisés
         function updateExamensSpecialises(formData) {
             const section = document.getElementById('examens-specialises-section');
-            
+
             // Remplir les champs
             colorerValeurAnormale('procalcitonine-value', formData.procalcitonineResult || '', 0, 0.05);
-            
+
             // Afficher la section si des données sont présentes
             if (formData.procalcitonineResult) {
                 section.style.display = 'block';
             } else {
                 section.style.display = 'none';
             }
+        }
+
+        // Fonction pour remplir la section Sérologie Widal & Félix
+        function updateWidalFelix(formData) {
+            console.log('=== updateWidalFelix APPELÉE ===');
+            console.log('formData.showWidalInReport:', formData.showWidalInReport);
+            console.log('formData.widalTyphiO:', formData.widalTyphiO);
+            console.log('formData.widalTyphiH:', formData.widalTyphiH);
+
+            const section = document.getElementById('widal-felix-section');
+            console.log('widal-felix-section trouvé:', !!section);
+
+            const antigens = [
+                { id: 'widal-typhi-o', data: 'widalTyphiO' },
+                { id: 'widal-typhi-h', data: 'widalTyphiH' },
+                { id: 'widal-paratyphi-ao', data: 'widalParatyphiAO' },
+                { id: 'widal-paratyphi-ah', data: 'widalParatyphiAH' },
+                { id: 'widal-paratyphi-bo', data: 'widalParatyphiBO' },
+                { id: 'widal-paratyphi-bh', data: 'widalParatyphiBH' },
+                { id: 'widal-paratyphi-co', data: 'widalParatyphiCO' },
+                { id: 'widal-paratyphi-ch', data: 'widalParatyphiCH' },
+                { id: 'widal-enteridis-h', data: 'widalEnteridisH' },
+                { id: 'widal-thyphi-mutrium-h', data: 'widalThyphiMutriumH' }
+            ];
+
+            let hasData = false;
+
+            antigens.forEach(ag => {
+                const resultEl = document.getElementById(ag.id + '-result');
+                const row = document.getElementById(ag.id + '-row');
+                const value = formData[ag.data];
+
+                if (value === 'positif') {
+                    resultEl.textContent = 'Positif';
+                    resultEl.classList.add('critical-positive');
+                    resultEl.classList.remove('result-negative');
+                    if (row) row.style.display = '';
+                    hasData = true;
+                } else if (value === 'negatif') {
+                    resultEl.textContent = 'Négatif';
+                    resultEl.classList.remove('critical-positive');
+                    if (row) row.style.display = '';
+                    hasData = true;
+                } else {
+                    resultEl.textContent = '-';
+                    if (row) row.style.display = 'none';
+                }
+            });
+
+            const widalConclusionEl = document.getElementById('widal-felix-conclusion');
+            if (widalConclusionEl) widalConclusionEl.textContent = formData.widalConclusion || '-';
+            const widalConclusionContainer = widalConclusionEl ? widalConclusionEl.parentElement : null;
+            if (formData.widalConclusion) {
+                hasData = true;
+                if (widalConclusionContainer) widalConclusionContainer.style.display = '';
+            } else {
+                if (widalConclusionContainer) widalConclusionContainer.style.display = 'none';
+            }
+
+            console.log('Widal hasData:', hasData, 'showWidalInReport:', formData.showWidalInReport);
+            if (hasData && formData.showWidalInReport) {
+                section.style.display = 'block';
+                console.log('✅ Widal section AFFICHÉE');
+            } else {
+                section.style.display = 'none';
+                console.log('❌ Widal section MASQUÉE (hasData=' + hasData + ', showInReport=' + formData.showWidalInReport + ')');
+            }
+        }
+
+        // Fonction pour remplir la section ECBU
+        function updateEcbu(formData) {
+            const section = document.getElementById('ecbu-section');
+
+            const fields = {
+                'ecbu-recueil-value': formData.ecbuRecueil,
+                'ecbu-aspect-value': formData.ecbuAspect,
+                'ecbu-ph-value': formData.ecbuPh,
+                'ecbu-leucocytes-value': formData.ecbuLeucocytes,
+                'ecbu-hematies-value': formData.ecbuHematies,
+                'ecbu-cellules-epitheliales-value': formData.ecbuCellulesEpitheliales,
+                'ecbu-cylindres-value': formData.ecbuCylindres,
+                'ecbu-cristaux-value': formData.ecbuCristaux,
+                'ecbu-examen-direct-value': formData.ecbuExamenDirect,
+                'ecbu-cultures-value': formData.ecbuCultures
+            };
+
+            let hasData = false;
+            Object.keys(fields).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    const val = fields[id];
+                    el.textContent = val || '-';
+                    const row = el.closest('tr');
+                    if (val) {
+                        hasData = true;
+                        if (row) row.style.display = '';
+                    } else {
+                        if (row) row.style.display = 'none';
+                    }
+                }
+            });
+
+            const ecbuConclusionEl = document.getElementById('ecbu-conclusion-value');
+            const ecbuConclusionContainer = ecbuConclusionEl ? ecbuConclusionEl.parentElement : null;
+            if (ecbuConclusionEl) ecbuConclusionEl.textContent = formData.ecbuConclusion || '-';
+            if (formData.ecbuConclusion) {
+                hasData = true;
+                if (ecbuConclusionContainer) ecbuConclusionContainer.style.display = '';
+            } else {
+                if (ecbuConclusionContainer) ecbuConclusionContainer.style.display = 'none';
+            }
+
+            if (hasData && formData.showEcbuInReport) {
+                section.style.display = 'block';
+                masquerSousTablesVides('ecbu-section');
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        // Fonction pour remplir la section Examen Parasitologique des Selles
+        function updateParasitoSelles(formData) {
+            const section = document.getElementById('parasito-selles-section');
+
+            const fields = {
+                'parasito-selles-aspect-value': formData.parasitoSellesAspect,
+                'parasito-selles-cellules-value': formData.parasitoSellesCellules,
+                'parasito-selles-leucocytes-value': formData.parasitoSellesLeucocytes,
+                'parasito-selles-hematies-value': formData.parasitoSellesHematies,
+                'parasito-selles-charcot-value': formData.parasitoSellesCharcot,
+                'parasito-selles-microscopique-value': formData.parasitoSellesMicroscopique,
+                'parasito-selles-enrichissement-value': formData.parasitoSellesEnrichissement
+            };
+
+            let hasData = false;
+            Object.keys(fields).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    const val = fields[id];
+                    el.textContent = val || '-';
+                    const row = el.closest('tr');
+                    if (val) {
+                        hasData = true;
+                        if (row) row.style.display = '';
+                    } else {
+                        if (row) row.style.display = 'none';
+                    }
+                }
+            });
+
+            if (hasData && formData.showParasitoSellesInReport) {
+                section.style.display = 'block';
+                masquerSousTablesVides('parasito-selles-section');
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        // Fonction pour remplir la section Coproculture
+        function updateCoproculture(formData) {
+            const section = document.getElementById('coproculture-section');
+
+            const fields = {
+                'coproculture-aspect-value': formData.coprocultureAspect,
+                'coproculture-cellules-value': formData.coprocultureCellules,
+                'coproculture-leucocytes-value': formData.coprocultureLeucocytes,
+                'coproculture-hematies-value': formData.coprocultureHematies
+            };
+
+            let hasData = false;
+            Object.keys(fields).forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    const val = fields[id];
+                    el.textContent = val || '-';
+                    const row = el.closest('tr');
+                    if (val) {
+                        hasData = true;
+                        if (row) row.style.display = '';
+                    } else {
+                        if (row) row.style.display = 'none';
+                    }
+                }
+            });
+
+            // Cultures (in a div, not a table row)
+            const culturesEl = document.getElementById('coproculture-cultures-value');
+            const culturesContainer = culturesEl ? culturesEl.parentElement : null;
+            if (culturesEl) culturesEl.textContent = formData.coprocultureCultures || '-';
+            if (formData.coprocultureCultures) {
+                hasData = true;
+                if (culturesContainer) culturesContainer.style.display = '';
+            } else {
+                if (culturesContainer) culturesContainer.style.display = 'none';
+            }
+
+            // Gram percentages with % suffix
+            const gramNegEl = document.getElementById('coproculture-gram-negatifs-value');
+            if (formData.coprocultureGramNegatifs) {
+                gramNegEl.textContent = formData.coprocultureGramNegatifs + ' %';
+                if (gramNegEl.closest('tr')) gramNegEl.closest('tr').style.display = '';
+                hasData = true;
+            } else {
+                if (gramNegEl && gramNegEl.closest('tr')) gramNegEl.closest('tr').style.display = 'none';
+            }
+            const gramPosEl = document.getElementById('coproculture-gram-positifs-value');
+            if (formData.coprocultureGramPositifs) {
+                gramPosEl.textContent = formData.coprocultureGramPositifs + ' %';
+                if (gramPosEl.closest('tr')) gramPosEl.closest('tr').style.display = '';
+                hasData = true;
+            } else {
+                if (gramPosEl && gramPosEl.closest('tr')) gramPosEl.closest('tr').style.display = 'none';
+            }
+
+            if (hasData && formData.showCoprocultureInReport) {
+                section.style.display = 'block';
+                masquerSousTablesVides('coproculture-section');
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        // Fonction pour remplir la section Électrophorèse des Protéines Sériques
+        function updateElectrophorese(formData) {
+            console.log('=== UPDATE ELECTROPHORESE APPELÉE ===');
+            console.log('formData reçu:', formData);
+            console.log('albumineGlResult:', formData.albumineGlResult);
+            console.log('albuminePctResult:', formData.albuminePctResult);
+            console.log('alpha1GlResult:', formData.alpha1GlResult);
+            console.log('proteinesTotalesResult:', formData.proteinesTotalesResult);
+
+            const section = document.getElementById('electrophorese-section');
+            console.log('Section électrophorèse trouvée:', section ? 'OUI' : 'NON');
+
+            // Vérifier si des données d'électrophorèse sont présentes
+            const hasElectrophoreseData = formData.albumineGlResult || formData.albuminePctResult ||
+                formData.alpha1GlResult || formData.alpha1PctResult ||
+                formData.alpha2GlResult || formData.alpha2PctResult ||
+                formData.betaGlResult || formData.betaPctResult ||
+                formData.gammaGlResult || formData.gammaPctResult ||
+                formData.proteinesTotalesResult || formData.rapportAgResult;
+
+            console.log('hasElectrophoreseData:', hasElectrophoreseData);
+
+            if (hasElectrophoreseData) {
+                console.log('✅ Données électrophorèse présentes - Affichage de la section');
+                section.style.display = 'block';
+
+                // Nature de l'échantillon
+                const natureEchantillon = formData.typeEchantillon || 'Sérum';
+                document.getElementById('nature-echantillon-electrophorese').textContent = natureEchantillon;
+
+                // Déterminer quelles colonnes ont des données
+                const hasGlData = formData.albumineGlResult || formData.alpha1GlResult ||
+                    formData.alpha2GlResult || formData.betaGlResult || formData.gammaGlResult ||
+                    formData.proteinesTotalesResult;
+                const hasPctData = formData.albuminePctResult || formData.alpha1PctResult ||
+                    formData.alpha2PctResult || formData.betaPctResult || formData.gammaPctResult;
+
+                console.log('hasGlData:', hasGlData, 'hasPctData:', hasPctData);
+
+                // Masquer/afficher les colonnes g/L et %
+                const colGlElements = section.querySelectorAll('.col-gl');
+                const colPctElements = section.querySelectorAll('.col-pct');
+                const colCombinedElements = section.querySelectorAll('.col-combined');
+                const colCombinedHiddenElements = section.querySelectorAll('.col-combined-hidden');
+
+                // Afficher/masquer les colonnes selon les données
+                colGlElements.forEach(el => {
+                    if (!el.classList.contains('col-combined')) {
+                        el.style.display = hasGlData ? '' : 'none';
+                    }
+                });
+                colPctElements.forEach(el => {
+                    if (!el.classList.contains('col-combined-hidden')) {
+                        el.style.display = hasPctData ? '' : 'none';
+                    }
+                });
+
+                // Gérer le colspan des lignes combinées (protéines totales et rapport A/G)
+                colCombinedElements.forEach(el => {
+                    if (hasGlData && hasPctData) {
+                        el.setAttribute('colspan', '2');
+                    } else {
+                        el.removeAttribute('colspan');
+                    }
+                });
+                // Afficher/masquer les cellules cachées pour colspan
+                colCombinedHiddenElements.forEach(el => {
+                    el.style.display = (hasGlData && hasPctData) ? 'none' : 'none'; // Toujours cachées
+                });
+
+                // Mettre à jour les valeurs de référence selon les colonnes visibles
+                const refData = {
+                    'albumine': { gl: '35-50 g/L', pct: '55-65%' },
+                    'alpha1': { gl: '1-4 g/L', pct: '2-5%' },
+                    'alpha2': { gl: '4-8 g/L', pct: '7-13%' },
+                    'beta': { gl: '5-10 g/L', pct: '8-14%' },
+                    'gamma': { gl: '6-16 g/L', pct: '10-20%' }
+                };
+
+                Object.keys(refData).forEach(key => {
+                    const refEl = document.getElementById(key + '-ref');
+                    if (refEl) {
+                        if (hasGlData && hasPctData) {
+                            refEl.textContent = '(' + refData[key].gl + ' ou ' + refData[key].pct + ')';
+                        } else if (hasGlData) {
+                            refEl.textContent = '(' + refData[key].gl + ')';
+                        } else if (hasPctData) {
+                            refEl.textContent = '(' + refData[key].pct + ')';
+                        }
+                    }
+                });
+
+                // Remplir les valeurs avec validation des valeurs anormales
+                // Albumine
+                const albumineGlElement = document.getElementById('albumine-gl-value');
+                const albuminePctElement = document.getElementById('albumine-pct-value');
+                albumineGlElement.textContent = formData.albumineGlResult || '-';
+                albuminePctElement.textContent = formData.albuminePctResult ? formData.albuminePctResult + '%' : '-';
+                colorerValeurAnormale('albumine-gl-value', formData.albumineGlResult || '', 35, 50);
+                colorerValeurAnormale('albumine-pct-value', formData.albuminePctResult || '', 55, 65);
+
+                // Alpha-1 Globulines
+                document.getElementById('alpha1-gl-value').textContent = formData.alpha1GlResult || '-';
+                document.getElementById('alpha1-pct-value').textContent = formData.alpha1PctResult ? formData.alpha1PctResult + '%' : '-';
+                colorerValeurAnormale('alpha1-gl-value', formData.alpha1GlResult || '', 1, 4);
+                colorerValeurAnormale('alpha1-pct-value', formData.alpha1PctResult || '', 2, 5);
+
+                // Alpha-2 Globulines
+                document.getElementById('alpha2-gl-value').textContent = formData.alpha2GlResult || '-';
+                document.getElementById('alpha2-pct-value').textContent = formData.alpha2PctResult ? formData.alpha2PctResult + '%' : '-';
+                colorerValeurAnormale('alpha2-gl-value', formData.alpha2GlResult || '', 4, 8);
+                colorerValeurAnormale('alpha2-pct-value', formData.alpha2PctResult || '', 7, 13);
+
+                // Bêta Globulines
+                document.getElementById('beta-gl-value').textContent = formData.betaGlResult || '-';
+                document.getElementById('beta-pct-value').textContent = formData.betaPctResult ? formData.betaPctResult + '%' : '-';
+                colorerValeurAnormale('beta-gl-value', formData.betaGlResult || '', 5, 10);
+                colorerValeurAnormale('beta-pct-value', formData.betaPctResult || '', 8, 14);
+
+                // Gamma Globulines
+                document.getElementById('gamma-gl-value').textContent = formData.gammaGlResult || '-';
+                document.getElementById('gamma-pct-value').textContent = formData.gammaPctResult ? formData.gammaPctResult + '%' : '-';
+                colorerValeurAnormale('gamma-gl-value', formData.gammaGlResult || '', 6, 16);
+                colorerValeurAnormale('gamma-pct-value', formData.gammaPctResult || '', 10, 20);
+
+                // Protéines Totales
+                document.getElementById('proteines-totales-value').textContent = formData.proteinesTotalesResult ? formData.proteinesTotalesResult + ' g/L' : '-';
+                colorerValeurAnormale('proteines-totales-value', formData.proteinesTotalesResult || '', 60, 80);
+
+                // Rapport Albumine/Globulines
+                document.getElementById('rapport-ag-value').textContent = formData.rapportAgResult || '-';
+                colorerValeurAnormale('rapport-ag-value', formData.rapportAgResult || '', 1.0, 2.2);
+
+                // Commentaires
+                document.getElementById('electrophorese-comments-display').textContent = formData.electrophoreseComments || '-';
+
+                // Contrôler explicitement la visibilité des lignes basée sur formData
+                // Albumine
+                if (formData.albumineGlResult || formData.albuminePctResult) {
+                    document.getElementById('albumine-row').style.display = '';
+                } else {
+                    document.getElementById('albumine-row').style.display = 'none';
+                }
+
+                // Alpha-1 Globulines
+                if (formData.alpha1GlResult || formData.alpha1PctResult) {
+                    document.getElementById('alpha1-row').style.display = '';
+                } else {
+                    document.getElementById('alpha1-row').style.display = 'none';
+                }
+
+                // Alpha-2 Globulines
+                if (formData.alpha2GlResult || formData.alpha2PctResult) {
+                    document.getElementById('alpha2-row').style.display = '';
+                } else {
+                    document.getElementById('alpha2-row').style.display = 'none';
+                }
+
+                // Bêta Globulines
+                if (formData.betaGlResult || formData.betaPctResult) {
+                    document.getElementById('beta-row').style.display = '';
+                } else {
+                    document.getElementById('beta-row').style.display = 'none';
+                }
+
+                // Gamma Globulines
+                if (formData.gammaGlResult || formData.gammaPctResult) {
+                    document.getElementById('gamma-row').style.display = '';
+                } else {
+                    document.getElementById('gamma-row').style.display = 'none';
+                }
+
+                // Protéines Totales
+                if (formData.proteinesTotalesResult) {
+                    document.getElementById('proteines-totales-row').style.display = '';
+                } else {
+                    document.getElementById('proteines-totales-row').style.display = 'none';
+                }
+
+                // Rapport A/G
+                if (formData.rapportAgResult) {
+                    document.getElementById('rapport-ag-row').style.display = '';
+                } else {
+                    document.getElementById('rapport-ag-row').style.display = 'none';
+                }
+
+                console.log('✅ Visibilité des lignes électrophorèse contrôlée directement');
+            } else {
+                console.log('❌ Aucune donnée électrophorèse - Section masquée');
+                section.style.display = 'none';
+            }
+            console.log('=== FIN UPDATE ELECTROPHORESE ===');
         }
 
         // Fonction pour mettre en évidence les valeurs anormales
@@ -2254,12 +3234,25 @@
                 { valueId: 'potassium-value', rowId: 'potassium-row' },
                 { valueId: 'chlore-value', rowId: 'chlore-row' },
                 { valueId: 'magnesium-value', rowId: 'magnesium-row' },
-                { valueId: 'calcium-value', rowId: 'calcium-row' }
+                { valueId: 'calcium-value', rowId: 'calcium-row' },
+                { valueId: 'hba1c-value', rowId: 'hba1c-row' },
+                { valueId: 'clairance-creatinine-value', rowId: 'clairance-creatinine-row' }
             ];
 
             // Liste des examens spécialisés
             const examensSpecialises = [
                 { valueId: 'procalcitonine-value', rowId: 'procalcitonine-row' }
+            ];
+
+            // Liste des champs d'électrophorèse avec leurs IDs de ligne correspondants
+            const electrophoreseFields = [
+                { valueId: 'albumine-gl-value', rowId: 'albumine-row' },
+                { valueId: 'alpha1-gl-value', rowId: 'alpha1-row' },
+                { valueId: 'alpha2-gl-value', rowId: 'alpha2-row' },
+                { valueId: 'beta-gl-value', rowId: 'beta-row' },
+                { valueId: 'gamma-gl-value', rowId: 'gamma-row' },
+                { valueId: 'proteines-totales-value', rowId: 'proteines-totales-row' },
+                { valueId: 'rapport-ag-value', rowId: 'rapport-ag-row' }
             ];
 
             // Fonction pour vérifier si une valeur est vide
@@ -2340,6 +3333,26 @@
                     }
                 }
                 console.log('---');
+            });
+
+            // Masquer les lignes vides de l'électrophorèse
+            console.log('=== ÉLECTROPHORÈSE ===');
+            electrophoreseFields.forEach(field => {
+                const valueElement = document.getElementById(field.valueId);
+                const rowElement = document.getElementById(field.rowId);
+
+                if (valueElement && rowElement) {
+                    const value = valueElement.textContent;
+                    console.log(`Champ: ${field.valueId}, Valeur: "${value}"`);
+
+                    if (isEmpty(value)) {
+                        console.log(`-> MASQUER la ligne ${field.rowId}`);
+                        rowElement.style.display = 'none';
+                    } else {
+                        console.log(`-> AFFICHER la ligne ${field.rowId}`);
+                        rowElement.style.display = '';
+                    }
+                }
             });
 
             // Masquer les lignes vides de la formule leucocytaire
@@ -2530,8 +3543,42 @@
             masquerSiVide('chlore-value', 'chlore-row');
             masquerSiVide('magnesium-value', 'magnesium-row');
             masquerSiVide('calcium-value', 'calcium-row');
+            masquerSiVide('hba1c-value', 'hba1c-row');
+            masquerSiVide('clairance-creatinine-value', 'clairance-creatinine-row');
             masquerSiVide('procalcitonine-value', 'procalcitonine-row');
-            
+
+            // Appliquer à toutes les lignes du tableau électrophorèse
+            // Pour électrophorèse, vérifier les deux colonnes (g/L ET %)
+            function masquerElectrophoreseSiVide(glValueId, pctValueId, rowId) {
+                const glValueEl = document.getElementById(glValueId);
+                const pctValueEl = document.getElementById(pctValueId);
+                const rowEl = document.getElementById(rowId);
+
+                if (rowEl) {
+                    const glVal = glValueEl ? glValueEl.textContent.trim() : '';
+                    const pctVal = pctValueEl ? pctValueEl.textContent.trim() : '';
+                    const glEmpty = !glVal || glVal === '-' || glVal === '';
+                    const pctEmpty = !pctVal || pctVal === '-' || pctVal === '';
+
+                    // Masquer seulement si les DEUX sont vides
+                    if (glEmpty && pctEmpty) {
+                        rowEl.style.display = 'none';
+                        console.log(`❌ ${rowId} masqué (g/L: "${glVal}", %: "${pctVal}")`);
+                    } else {
+                        rowEl.style.display = '';
+                        console.log(`✅ ${rowId} affiché (g/L: "${glVal}", %: "${pctVal}")`);
+                    }
+                }
+            }
+
+            masquerElectrophoreseSiVide('albumine-gl-value', 'albumine-pct-value', 'albumine-row');
+            masquerElectrophoreseSiVide('alpha1-gl-value', 'alpha1-pct-value', 'alpha1-row');
+            masquerElectrophoreseSiVide('alpha2-gl-value', 'alpha2-pct-value', 'alpha2-row');
+            masquerElectrophoreseSiVide('beta-gl-value', 'beta-pct-value', 'beta-row');
+            masquerElectrophoreseSiVide('gamma-gl-value', 'gamma-pct-value', 'gamma-row');
+            masquerSiVide('proteines-totales-value', 'proteines-totales-row');
+            masquerSiVide('rapport-ag-value', 'rapport-ag-row');
+
             // Vérifier si le tableau hémogramme a des données visibles
             const hemogrammeRows = [
                 'leucocytes-row', 'globules-rouges-row', 'hemoglobine-row', 'hematocrite-row',
